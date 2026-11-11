@@ -1,0 +1,1157 @@
+{
+  "date": "2026-11-11",
+  "status": "completed_with_invalid_proposal",
+  "protocol_revision": "v2 with documented invalid-proposal failure-handling amendment",
+  "result": {
+    "status": "completed_with_invalid_proposal",
+    "original_identity": "sha256:157db96e9fa419bb4e97f79dca1cddce63e2045476f3e5c2b3b2375a601bbfe8",
+    "recovery_manifest": "sha256:c0b6983cf71c80a5a90e7b6bf989f9bb77c07203c8eb8bdce4a1b13903bd2761",
+    "plan": {
+      "epochs": 1,
+      "audit_seeds": [
+        31,
+        47
+      ],
+      "per_generation": {
+        "agent_calls": 17,
+        "model_requests": 17,
+        "tokens": 557056,
+        "episodes": 4,
+        "matches": 24
+      },
+      "per_arm": {
+        "agent_calls": 17,
+        "model_requests": 17,
+        "tokens": 557056,
+        "episodes": 4,
+        "matches": 24
+      },
+      "per_audit": {
+        "agent_calls": 8,
+        "model_requests": 8,
+        "tokens": 262144,
+        "episodes": 2,
+        "matches": 12
+      },
+      "total": {
+        "agent_calls": 50,
+        "model_requests": 50,
+        "tokens": 1638400,
+        "episodes": 12,
+        "matches": 72
+      },
+      "interpretation": "A paired pilot compares frozen harnesses; it does not establish statistical significance or general RSI superiority."
+    },
+    "original_search_failure": "GearError: Protocol v2 instructions must fit in 2048 UTF-8 bytes each",
+    "amendment": "Invalid C proposal retained the sealed parent; all prior consumption retained; no replacement proposal or candidate evaluation.",
+    "arms": [
+      {
+        "label": "B",
+        "frozen_harness": "sha256:ff4b3caa10d95f20729ae3dc15b44c58a1e82e43a8a680e8f90e5a517705ec19",
+        "provenance": "original Gear export",
+        "gate": "rejected"
+      },
+      {
+        "label": "C",
+        "frozen_harness": "sha256:ff4b3caa10d95f20729ae3dc15b44c58a1e82e43a8a680e8f90e5a517705ec19",
+        "provenance": "Gear export after local confirmed-receipt reconstruction of invalid proposal",
+        "gate": "not_run"
+      }
+    ],
+    "audits": [
+      {
+        "label": "B",
+        "frozen_harness": "sha256:ff4b3caa10d95f20729ae3dc15b44c58a1e82e43a8a680e8f90e5a517705ec19",
+        "result": {
+          "identity": "sha256:c32f2c642ed6784393eef88e58b4f46e4f2f237d3a41892dbf3e58630396001f",
+          "status": "completed",
+          "mean_score": 0.375,
+          "episodes": [
+            {
+              "seed": 31,
+              "score": 0.375
+            },
+            {
+              "seed": 47,
+              "score": 0.375
+            }
+          ],
+          "budget": {
+            "limits": {
+              "agent_calls": 8,
+              "model_requests": 8,
+              "tokens": 262144,
+              "episodes": 2,
+              "matches": 12
+            },
+            "charged": {
+              "agent_calls": 6,
+              "model_requests": 6,
+              "tokens": 20600,
+              "episodes": 2,
+              "matches": 12
+            },
+            "observed": {
+              "agent_calls": 6,
+              "model_requests": 6,
+              "tokens": 20600,
+              "episodes": 2,
+              "matches": 12
+            },
+            "unknown": [],
+            "deadline": 1794380412179
+          }
+        }
+      },
+      {
+        "label": "C",
+        "frozen_harness": "sha256:ff4b3caa10d95f20729ae3dc15b44c58a1e82e43a8a680e8f90e5a517705ec19",
+        "result": {
+          "identity": "sha256:81bac41ea459ab546421a73e410fd02c4ea9954d0d23e6fe290dc457d8761628",
+          "status": "completed",
+          "mean_score": 0.5,
+          "episodes": [
+            {
+              "seed": 31,
+              "score": 0.375
+            },
+            {
+              "seed": 47,
+              "score": 0.625
+            }
+          ],
+          "budget": {
+            "limits": {
+              "agent_calls": 8,
+              "model_requests": 8,
+              "tokens": 262144,
+              "episodes": 2,
+              "matches": 12
+            },
+            "charged": {
+              "agent_calls": 6,
+              "model_requests": 6,
+              "tokens": 22122,
+              "episodes": 2,
+              "matches": 12
+            },
+            "observed": {
+              "agent_calls": 6,
+              "model_requests": 6,
+              "tokens": 22122,
+              "episodes": 2,
+              "matches": 12
+            },
+            "unknown": [],
+            "deadline": 1794380562542
+          }
+        }
+      }
+    ],
+    "same_retained_harness": true,
+    "paired_C_minus_B": 0.125,
+    "general_rsi_superiority": "not_established",
+    "interpretation": "Failure-aware exploratory pilot. If retained harnesses are identical, score differences measure repeat variability, not an improvement caused by I.",
+    "budget": {
+      "charged": {
+        "agent_calls": 23,
+        "model_requests": 23,
+        "tokens": 79462,
+        "episodes": 7,
+        "matches": 42
+      },
+      "observed": {
+        "agent_calls": 23,
+        "model_requests": 23,
+        "tokens": 79462,
+        "episodes": 7,
+        "matches": 42
+      },
+      "unknown": []
+    },
+    "prior_trial_charged": {
+      "model_requests": 17,
+      "tokens": 27393,
+      "matches": 27
+    },
+    "reconstruction_physical_cost": {
+      "model_requests": 0,
+      "matches": 0
+    }
+  },
+  "verification": {
+    "ledger_usage_reconciled": true,
+    "official_replays_reconciled": 42,
+    "all_requests_confirmed": true,
+    "lookahead_calls_equal_episodes": true,
+    "model_phase_counts": {
+      "lookahead": 7,
+      "learn": 14,
+      "propose": 2
+    },
+    "compile_jobs": 21,
+    "compile_failures": 0,
+    "normal_games": 42,
+    "adjudicated_error_games": 0,
+    "training_games": 14,
+    "scoring_games": 28,
+    "completed_resume": {
+      "status": "passed",
+      "external_calls": 0,
+      "report_unchanged": true,
+      "report_sha256": "80cc1992fa88b09278b1d39dcdc6a325602077f4a65b5879e1350919c8afb7f5"
+    },
+    "historical_source_snapshot": {
+      "source_files_verified": 18,
+      "historical_source_hashes": {
+        "examples/arena/compare.mjs": "e57ff18df8d24004c0dbe02ce5036371f17316b99c0c38e384cfcafbaa53aef4",
+        "examples/arena/monecraft-contract.txt": "3e381927a073cb6afa0a4e36b60f0699e283df80f18c1ae765688ae8cfcda36c",
+        "examples/arena/runtime/contract-probe.cpp": "221675f31132f689615698de226c525da7a996e41d82280a2f4d89dc7f432c05",
+        "examples/arena/runtime/match.py": "340de090c87837894a61617ffe6574b1c17fe2961210a84f1286720db00a7c56",
+        "examples/arena/validate-learning.mjs": "173c90fbafb78f58244d7fc18e04bdc63fb5282fc7702290c35d90253f2d8e19",
+        "src/adapters/arena/agent.ts": "588c5900e30d373d3077fe24ed9c4b17917c071cff10aa3adf0d36ebb44e8a9c",
+        "src/adapters/arena/budget.ts": "3d037175dec549eecc60ab58f5d7829bd8d2dd1827e49aeb9387e14283133d26",
+        "src/adapters/arena/comparison.ts": "e33abf6821181e6b2248dc013cbb09de84b8aa08d63b2ca157c2664b9df214e7",
+        "src/adapters/arena/contracts.ts": "a7e6681ca1439c2c9d6e14e13bf3b69546a13703b43a054d04c6372b36eb8115",
+        "src/adapters/arena/coordinator.ts": "f2370413484f839ca8ce6511d43ed03e5ed449ce30c5e191a421431ad3bec04d",
+        "src/adapters/arena/episode.ts": "890b33c4d300094f1438ff624585e597748c07832f1832760db153245e6ad2fe",
+        "src/adapters/arena/harness.ts": "fa094076fdc2e47601d2b6dc18f4fa4a0711cb288dd00defec4b2a454ace2c25",
+        "src/adapters/arena/linear.ts": "746446952c4f351421f8ccdb459c2853e2057bcf6b9815f6136f19321c2e8282",
+        "src/adapters/arena/model.ts": "7771bad2af645651b4c16d767f334696b94ba4c8d1899b87dc5208c8fbd3c266",
+        "src/adapters/arena/monecraft.ts": "0ad8765d1e380004d2aa06d02609db46b3a41dc6b9df223b073847b5bf00df12",
+        "src/adapters/arena/planner.ts": "b4279a05b6af14a4d428585a7720dcdbb853f679c7d0c86f7798597ed18e4a63",
+        "src/adapters/arena/provider.ts": "153b11436ed6bc737dc73396a7ad8f1dd9dccad27bc6776a97c65784e466c479",
+        "src/arena.ts": "c4ac7fead2b483b382728b728cc9c51db5753975a7e9faf02f8b3e1d43b27f01"
+      },
+      "historical_emitted_implementation": "sha256:185612a03403311604844eec697d43615350c91ccfd3cc419a1fa3e26cdfbee0",
+      "expected_implementation": "sha256:185612a03403311604844eec697d43615350c91ccfd3cc419a1fa3e26cdfbee0",
+      "emission_matches": true
+    },
+    "current_implementation": "sha256:69a4a670f58dc0ff69eaa06a4e839be91b34e78973d9c86c35479b40f32efd7a",
+    "tests": 31
+  },
+  "budget": {
+    "new_trial": {
+      "agent_calls": 23,
+      "model_requests": 23,
+      "tokens": 79462,
+      "episodes": 7,
+      "matches": 42
+    },
+    "new_limits": {
+      "agent_calls": 50,
+      "model_requests": 50,
+      "tokens": 1638400,
+      "episodes": 12,
+      "matches": 72
+    },
+    "previous_trial": {
+      "model_requests": 17,
+      "tokens": 27393,
+      "matches": 27
+    },
+    "cumulative_real_trials": {
+      "model_requests": 40,
+      "tokens": 106855,
+      "matches": 69
+    },
+    "reconstruction_cost": {
+      "status": "passed",
+      "replayed": {
+        "model": 4,
+        "compile": 3,
+        "game": 6
+      },
+      "new_physical_model_requests": 0,
+      "new_physical_matches": 0,
+      "original_charged": {
+        "agent_calls": 11,
+        "model_requests": 11,
+        "tokens": 36740,
+        "episodes": 3,
+        "matches": 18
+      },
+      "reconstruction_budget_is_logical_only": true,
+      "retained_C": "sha256:ff4b3caa10d95f20729ae3dc15b44c58a1e82e43a8a680e8f90e5a517705ec19",
+      "gate": "not_run"
+    }
+  },
+  "audits": [
+    {
+      "scope": "B/audit",
+      "seed": 31,
+      "score": 0.375,
+      "policy_changed": false,
+      "learning_calls": 2,
+      "repair_used": false,
+      "compile_steps": [
+        {
+          "stage": "generate",
+          "status": "ready"
+        },
+        {
+          "stage": "revise",
+          "status": "ready"
+        }
+      ],
+      "final_policy_digest": "sha256:2a73f25bc0d4d7f08792d80c33e477ec7141206b066ef262a702c2a253b81940"
+    },
+    {
+      "scope": "B/audit",
+      "seed": 47,
+      "score": 0.375,
+      "policy_changed": true,
+      "learning_calls": 2,
+      "repair_used": false,
+      "compile_steps": [
+        {
+          "stage": "generate",
+          "status": "ready"
+        },
+        {
+          "stage": "revise",
+          "status": "ready"
+        }
+      ],
+      "final_policy_digest": "sha256:59e20a1ee5eacd573ddd8703050199b0c6ade820b380dc7b8bf50216580c822f"
+    },
+    {
+      "scope": "C/audit",
+      "seed": 31,
+      "score": 0.375,
+      "policy_changed": true,
+      "learning_calls": 2,
+      "repair_used": false,
+      "compile_steps": [
+        {
+          "stage": "generate",
+          "status": "ready"
+        },
+        {
+          "stage": "revise",
+          "status": "ready"
+        }
+      ],
+      "final_policy_digest": "sha256:d7b78ad7a2cdd4e2c510d3d5df041075a81eb1145a3130c9bfcbbdef1a5bf2b5"
+    },
+    {
+      "scope": "C/audit",
+      "seed": 47,
+      "score": 0.625,
+      "policy_changed": true,
+      "learning_calls": 2,
+      "repair_used": false,
+      "compile_steps": [
+        {
+          "stage": "generate",
+          "status": "ready"
+        },
+        {
+          "stage": "revise",
+          "status": "ready"
+        }
+      ],
+      "final_policy_digest": "sha256:d69d6cd43abe33ef91faf99e8729e90672f466dc43d1f85804bf3cb0a08a6c76"
+    }
+  ],
+  "games": [
+    {
+      "scope": "B/search",
+      "kind": "training",
+      "seed": 1,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 3,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/78c608ce328ea62fe102bb9921e1923f8a39f8e7578df883d93e4ccbb0141072/result.txt",
+      "replay_sha256": "aff4b51d1dd049239a1b5c87f4dee8d213f77061e100ce57adcafde702504014"
+    },
+    {
+      "scope": "B/search",
+      "kind": "training",
+      "seed": 1,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/8c79630356fea9ff7042ac6c8251a236e6924183b26cecc4032b09d9b595e399/result.txt",
+      "replay_sha256": "af79ab130d41b05ac5a96e205505c523228909c4a6d43c0c79be47cf43b27a34"
+    },
+    {
+      "scope": "B/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 4,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/4c0e78424b8bf532f4fb89d187c002e4f6c633690e9cbd042a59abe276974924/result.txt",
+      "replay_sha256": "72280ee1ba993af5aa371f36147c658da3f721d62858100954815168c6a55045"
+    },
+    {
+      "scope": "B/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/5f0614270b2fb7e551caa4f09987f93b397a56896119b2ac0f262ceb9ea1922b/result.txt",
+      "replay_sha256": "c866334b49c69574d74eca9dd623a80afa9c48339c2c02ef4db89347901bd8ca"
+    },
+    {
+      "scope": "B/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 0,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 4,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/d94f10ade3d5e153e60aeca44baec5005e19a413a51d09f90c88f74da256998e/result.txt",
+      "replay_sha256": "aa1ff1f54c71374c21f47023a02273a2426155ee13c817f08b9cfa205e4850b7"
+    },
+    {
+      "scope": "B/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 1,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 932,
+        "unique_positions": 16,
+        "longest_stationary_streak": 14,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/c517e97abe54932716e16c27d06f16326ad12c44cd608705dfd2e4cab133680d/result.txt",
+      "replay_sha256": "bc5aec86c274b489222a4dc9490c4350972b9a6527cf55a9a49c0eed9da4d09e"
+    },
+    {
+      "scope": "B/search",
+      "kind": "training",
+      "seed": 1,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1,
+        "unique_positions": 2,
+        "longest_stationary_streak": 999,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/35d376d4f18de127a81539503a9c596185609dace46e6b0f46aa2e54290463e4/result.txt",
+      "replay_sha256": "b8ad368cf8d9dce941b7e3f5adc8e1ab7c65bae016f6e823dfb6e3fddbf60eba"
+    },
+    {
+      "scope": "B/search",
+      "kind": "training",
+      "seed": 1,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/b4cd5dd927527167e157074dd83f2676cbeb406d9951cacb7bdfafccd1fbc0f4/result.txt",
+      "replay_sha256": "af79ab130d41b05ac5a96e205505c523228909c4a6d43c0c79be47cf43b27a34"
+    },
+    {
+      "scope": "B/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 5,
+        "unique_positions": 6,
+        "longest_stationary_streak": 995,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/c5116221605d60024dc64d2bf213ee57cb02d9f649f8f09f16ca163bea52e30a/result.txt",
+      "replay_sha256": "e2b737c94b18101a24f4d6222ea3eff97de85bd8ea2f79e56808994aee2d7abf"
+    },
+    {
+      "scope": "B/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/e27d5f9f6b24fde7c3254bf8634377a6be191a07aec61ab2ae317e8a5994f455/result.txt",
+      "replay_sha256": "c866334b49c69574d74eca9dd623a80afa9c48339c2c02ef4db89347901bd8ca"
+    },
+    {
+      "scope": "B/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 0,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 5,
+        "unique_positions": 6,
+        "longest_stationary_streak": 995,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/6d72175e1f3fb41b8bf611913d6bc21e2eb580d9da9aa86be06865b70daeef76/result.txt",
+      "replay_sha256": "d57d077fcc8b30cd23f56b565bea3bae80173df31124c6bc9267dc6cbfb3ccf3"
+    },
+    {
+      "scope": "B/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 1,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 5,
+        "unique_positions": 6,
+        "longest_stationary_streak": 981,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/46ee391a590f94b031cec97dc6cd049668d4f7062f94420882cf156cdcf81fe4/result.txt",
+      "replay_sha256": "485b4d802f1ce17b3576012b2c7f73531ac351aba7f31706f6de7d5d60d446bb"
+    },
+    {
+      "scope": "C/search",
+      "kind": "training",
+      "seed": 1,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 3,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/622d5cc093243bf88b96e8aeeb585d61f0f62c9047b0a21792c3107a5d22bc55/result.txt",
+      "replay_sha256": "e2047fec9dc823ca1b189de4771e36aaa69fba09f1813a0b3223a1eaa68a0b96"
+    },
+    {
+      "scope": "C/search",
+      "kind": "training",
+      "seed": 1,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/89ad32b320e47c5f5879070f63be4769c6c193cd18c1d67d8116eff7678c608d/result.txt",
+      "replay_sha256": "af79ab130d41b05ac5a96e205505c523228909c4a6d43c0c79be47cf43b27a34"
+    },
+    {
+      "scope": "C/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 5,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/a0de855b04fc71fc4f5514b6397234d313d8216ae2c44ceb537d02ff6c63b9fe/result.txt",
+      "replay_sha256": "94f9d4a6c4fba7736990fd08ddca03db4a00c3397cdb5fe80f4e50f7df04debc"
+    },
+    {
+      "scope": "C/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/8a5801c13d249060244fda5c79b124a405fa8cc9f0c492994b4fba38d766b4fe/result.txt",
+      "replay_sha256": "c866334b49c69574d74eca9dd623a80afa9c48339c2c02ef4db89347901bd8ca"
+    },
+    {
+      "scope": "C/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 0,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 5,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/0f42460b40ca6284444451b10f1105d9672c99b790b5e808712a5db4d8b3137a/result.txt",
+      "replay_sha256": "5ad1d0a429d643bae7a6fcea89219206175a9c0caefce3cb9fa7807831422fc5"
+    },
+    {
+      "scope": "C/search",
+      "kind": "scoring",
+      "seed": 7,
+      "seat": 1,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 853,
+        "unique_positions": 4,
+        "longest_stationary_streak": 14,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/22132c5a567de888f2d8038ed1151e1189ea7a2a98d733c2812f5618a0d95fba/result.txt",
+      "replay_sha256": "20af6ad15f1e725a2efd48c49c322f34091b807e8bd5dc43e19195944a89548f"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "training",
+      "seed": 1,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 3,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/a87857445492921495dfa25190ad0b95c697441de142cfea487235734ccc3111/result.txt",
+      "replay_sha256": "fd069f037e36bfa0f4d887c3a93675b386f0b931df442c2dc6685a06c4fdc461"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "training",
+      "seed": 1,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/2a75907dfe0d04e01884dbe6bc649f188390ecb01aa177d28d01d6dee615766e/result.txt",
+      "replay_sha256": "af79ab130d41b05ac5a96e205505c523228909c4a6d43c0c79be47cf43b27a34"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "scoring",
+      "seed": 31,
+      "seat": 0,
+      "score": 1,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 985,
+        "unique_positions": 27,
+        "longest_stationary_streak": 5,
+        "first_capture_round": 8,
+        "final_gold": 29430,
+        "final_mines": 3
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/b037cc5b6f659a7e7bd78d75207992c7eb5b555a74c18a89be68efc2e98b9a7d/result.txt",
+      "replay_sha256": "af0c79f79d66a0796bb016dc8bba877290d9938cfaa7e3498a7e11f8516b6043"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "scoring",
+      "seed": 31,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/220a6beb009b3da128479d838cef40681920f652432d8d17a04753f2314b120c/result.txt",
+      "replay_sha256": "9381f7c35e08a4b005e77544ca03ebac5d8b4439e00078a9086fa1ad147ecf20"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "scoring",
+      "seed": 31,
+      "seat": 0,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 259,
+        "unique_positions": 30,
+        "longest_stationary_streak": 86,
+        "first_capture_round": 8,
+        "final_gold": 9800,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/184ff9ae4571aa3349332289f83e957575223123925658ed95ca9831b83ec199/result.txt",
+      "replay_sha256": "fd474d7f8f46ecbccf82e2deb4f9f8be6012936e352d1ad985dfb3055ddb8675"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "scoring",
+      "seed": 31,
+      "seat": 1,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 83,
+        "unique_positions": 23,
+        "longest_stationary_streak": 110,
+        "first_capture_round": 11,
+        "final_gold": 4340,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/ecb8f9741d04482d22271045a8ebba2c6a50adebf42723a4389e9ba9301cad6c/result.txt",
+      "replay_sha256": "2a944c699089f4fec308f39f2a7be40c589554bffc86b8665c1d42c7906cf112"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "training",
+      "seed": 1,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 3,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/6e146b858ab0618e97d731f17177eef1af4c9783fcdaa67667c74e30a53ea578/result.txt",
+      "replay_sha256": "fd069f037e36bfa0f4d887c3a93675b386f0b931df442c2dc6685a06c4fdc461"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "training",
+      "seed": 1,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/dcb17f2feb8c9c0b56d775e8ddc00c93fdce2a675a21d9325171c85225f1f15b/result.txt",
+      "replay_sha256": "af79ab130d41b05ac5a96e205505c523228909c4a6d43c0c79be47cf43b27a34"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "scoring",
+      "seed": 47,
+      "seat": 0,
+      "score": 1,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 990,
+        "unique_positions": 20,
+        "longest_stationary_streak": 5,
+        "first_capture_round": 8,
+        "final_gold": 19670,
+        "final_mines": 2
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/3e7733405cbe3460f6ca0147ef745649bc6584c96f456699c67f888e5655d4e9/result.txt",
+      "replay_sha256": "bc18e1f6c6d196c612705edebbdd86a069dc5315c8f0ffbf7fca1ae4af69c609"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "scoring",
+      "seed": 47,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/ec5aeb9b9be4bb1ffb6600f31811666d3f5c5140ffe375aa989cd4c38b6ddd11/result.txt",
+      "replay_sha256": "d599b5acc107caa68188359cee80cfdde5ceb921c9e2eb4eb5d289ae3789dc3c"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "scoring",
+      "seed": 47,
+      "seat": 0,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 990,
+        "unique_positions": 20,
+        "longest_stationary_streak": 5,
+        "first_capture_round": 8,
+        "final_gold": 1470,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/06bf499e4694505c47ec5703e3bd9590d6d3a7465ce5a9b4f59b49242abd0aee/result.txt",
+      "replay_sha256": "dc0e875df3796307496885ee925a6d81290138624f0fa5314e9f889915ee729e"
+    },
+    {
+      "scope": "B/audit",
+      "kind": "scoring",
+      "seed": 47,
+      "seat": 1,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 859,
+        "unique_positions": 22,
+        "longest_stationary_streak": 31,
+        "first_capture_round": 11,
+        "final_gold": 1380,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/6ca9e205d099c7d87f1cf29b72abc07278439836f5bedce51261a9ef0eda7424/result.txt",
+      "replay_sha256": "e8049e5563e985b91f8c501121d19d2f98522eb268e821cc0fcc3be14a62a599"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "training",
+      "seed": 1,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 3,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/99d3c34c2888d80891ca6c9400ddaeedf67bd5568adb528d90aed85185a0c79f/result.txt",
+      "replay_sha256": "fd069f037e36bfa0f4d887c3a93675b386f0b931df442c2dc6685a06c4fdc461"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "training",
+      "seed": 1,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/d15f2b8e2c0069837e482a2ff0c46cb0b8f01c7b44383aea4d18754eb3659d7c/result.txt",
+      "replay_sha256": "af79ab130d41b05ac5a96e205505c523228909c4a6d43c0c79be47cf43b27a34"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "scoring",
+      "seed": 31,
+      "seat": 0,
+      "score": 1,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 985,
+        "unique_positions": 27,
+        "longest_stationary_streak": 5,
+        "first_capture_round": 8,
+        "final_gold": 29430,
+        "final_mines": 3
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/d3429e3cde9bb598fc02f31ccac7192377f233a03e94e6d8cf1437a028330cc3/result.txt",
+      "replay_sha256": "af0c79f79d66a0796bb016dc8bba877290d9938cfaa7e3498a7e11f8516b6043"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "scoring",
+      "seed": 31,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/1be8114a151e921292622ad69eb01822c7b3bd9a3312771d62a6f49fa53a1451/result.txt",
+      "replay_sha256": "9381f7c35e08a4b005e77544ca03ebac5d8b4439e00078a9086fa1ad147ecf20"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "scoring",
+      "seed": 31,
+      "seat": 0,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 985,
+        "unique_positions": 27,
+        "longest_stationary_streak": 5,
+        "first_capture_round": 8,
+        "final_gold": 1700,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/605cfc12b14ab73b0a8740a6eb6f979d6d00329cddbbe3cf6b34d80287dab9fb/result.txt",
+      "replay_sha256": "05c597db641d26350b9b22bfba74f2235d4355e3e1f19e157f1a27684c3bf34c"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "scoring",
+      "seed": 31,
+      "seat": 1,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 854,
+        "unique_positions": 25,
+        "longest_stationary_streak": 29,
+        "first_capture_round": 11,
+        "final_gold": 1610,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/fcdb2677859fd537c918f0221d740ff21f5851920913844c48f317225d742d20/result.txt",
+      "replay_sha256": "09080d133257921536f9f030b68dc16bddf58dc386ef64b9d48c49fca9e8f129"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "training",
+      "seed": 1,
+      "seat": 0,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 1000,
+        "unique_positions": 3,
+        "longest_stationary_streak": 0,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/6816fcc4abbfeea9cdc5659fbcdccbf37fdbc126e03161fc94942d98e1cf9791/result.txt",
+      "replay_sha256": "aff4b51d1dd049239a1b5c87f4dee8d213f77061e100ce57adcafde702504014"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "training",
+      "seed": 1,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/4467e906174ede0031034ef6ced7cd61e821877d53f6d5b3bcfc25fd28263a52/result.txt",
+      "replay_sha256": "af79ab130d41b05ac5a96e205505c523228909c4a6d43c0c79be47cf43b27a34"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "scoring",
+      "seed": 47,
+      "seat": 0,
+      "score": 1,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 111,
+        "unique_positions": 70,
+        "longest_stationary_streak": 864,
+        "first_capture_round": 8,
+        "final_gold": 55580,
+        "final_mines": 6
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/669cf275777441785bc63be1db8bbb3cb590768ad1feee7f4bf80e95a41cd935/result.txt",
+      "replay_sha256": "3bd596696ffc84a011157f6e1b1f486be1824a5737e23fe0da093bbab747085d"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "scoring",
+      "seed": 47,
+      "seat": 1,
+      "score": 0.5,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 0,
+        "unique_positions": 1,
+        "longest_stationary_streak": 1000,
+        "first_capture_round": null,
+        "final_gold": 0,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/d3b7b8ca4d6564c4388515ee16238748b74ae960a4eb1475c155382a32c8fdfd/result.txt",
+      "replay_sha256": "d599b5acc107caa68188359cee80cfdde5ceb921c9e2eb4eb5d289ae3789dc3c"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "scoring",
+      "seed": 47,
+      "seat": 0,
+      "score": 0,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 252,
+        "unique_positions": 55,
+        "longest_stationary_streak": 87,
+        "first_capture_round": 8,
+        "final_gold": 6000,
+        "final_mines": 0
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/49c0e05ddc149c63ccf0cbceee19da680e5204a52aa13e167f8ee5efc5df6cc2/result.txt",
+      "replay_sha256": "60594aeb234a81c2c4191b00a9a87e6df77df7b7e4b3bac41f001b7e71d2df17"
+    },
+    {
+      "scope": "C/audit",
+      "kind": "scoring",
+      "seed": 47,
+      "seat": 1,
+      "score": 1,
+      "terminal": "normal",
+      "rounds": 1000,
+      "own_behavior": {
+        "moved_turns": 31,
+        "unique_positions": 25,
+        "longest_stationary_streak": 907,
+        "first_capture_round": 11,
+        "final_gold": 10230,
+        "final_mines": 1
+      },
+      "replay": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/jobs/a4d3b846fb9b193649d0d05abdfd626e3b6f9353f79e839fb052ee5ca6cc09d5/result.txt",
+      "replay_sha256": "d5a896c082d2577aaa4372aef7e1d0da3c8bf9f8576a78b1e3e861ae426a79af"
+    }
+  ]
+}

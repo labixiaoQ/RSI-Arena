@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import {spawn} from 'node:child_process';
+import {mkdir,writeFile} from 'node:fs/promises';
+const base='http://127.0.0.1:5173';
+async function api(path,{method='GET',body,auth=true}={}){const r=await fetch(base+'/api/'+path,{method,headers:{...(auth?{Cookie:'__sites_local_auth=1'}:{}),Origin:base,'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});return {status:r.status,data:await r.json()};}
+assert.equal((await api('ops',{auth:false})).status,401);
+const input={title:'受控端到端验收',description:'网站真实审批/队列与Gear fixture闭环；无真实模型请求，无真实游戏对局。',executor:'Controlled fixture only; controlled-generation:0',improver:'Controlled fixture only; controlled-generation:0',public:false,idempotencyKey:crypto.randomUUID(),evidence:'controlled'};
+assert.equal((await api('submissions',{method:'POST',auth:false,body:input})).status,401);
+assert.equal((await api('submissions',{method:'POST',body:{...input,endpoint:'https://example.com'}})).status,400);
+assert.equal((await api('submissions',{method:'POST',body:{...input,executor:'测'.repeat(1000)}})).status,400);
+const created=await api('submissions',{method:'POST',body:input});assert.equal(created.status,201,JSON.stringify(created));const job=created.data.submission;
+assert.equal(job.status,'awaiting_approval');
+assert.equal((await api('submissions',{method:'POST',body:input})).data.submission.id,job.id);
+assert.equal((await api('submissions',{method:'POST',body:{...input,title:'different'}})).status,409);
+assert.equal((await api(`ops/${job.id}/approve`,{method:'POST',body:{manifestDigest:'invalid',note:'fixture only'}})).status,409);
+assert.equal((await api(`ops/${job.id}/approve`,{method:'POST',body:{manifestDigest:job.manifestDigest,note:'仅批准本次受控fixture工程验收，零付费模型调用，零真实游戏。'}})).data.submission.status,'queued');
+const child=spawn(process.execPath,['platform-runner/cli.mjs','--once'],{cwd:process.cwd(),env:{...process.env,ARENA_SITE_URL:base,ARENA_ENABLE_LIVE:'0',ARENA_RUNNER_ROOT:process.cwd()+'/work/service-e2e/'+job.id},stdio:['ignore','pipe','pipe']});let log='';child.stdout.on('data',c=>log+=c);child.stderr.on('data',c=>log+=c);const code=await new Promise(r=>child.on('close',r));assert.equal(code,0,log);
+const done=(await api('submissions')).data.submissions.find(s=>s.id===job.id);assert.equal(done.status,'completed',log+' '+JSON.stringify(done));
+assert.equal((await api('experiments/'+job.id,{auth:false})).status,404);
+const report=await api('experiments/'+job.id);assert.equal(report.status,200);assert.equal(report.data.evidence,'controlled');assert.equal(report.data.usage.modelRequests,0);assert.equal(report.data.usage.tokens,0);assert.equal(report.data.matches.length,0);assert.notEqual(report.data.arms[1].initialImprover,report.data.arms[1].finalImprover);assert.equal(report.data.arms[0].initialImprover,report.data.arms[0].finalImprover);
+assert.equal(JSON.stringify(report).includes('/Users/'),false);
+await mkdir('docs/validation',{recursive:true});await writeFile('docs/validation/service-e2e.json',JSON.stringify({checkedAt:new Date().toISOString(),jobId:job.id,scope:'local D1/R2 + real HTTP routes + real Gear fixture',status:'passed',actualModelRequests:0,actualTokens:0,actualGames:0,simulatedBudget:report.data.usage,checks:['auth','strict inputs','UTF8 limits','idempotent submit','digest-bound approval','claim','lease heartbeat','Gear B/C I inheritance','artifact upload','private visibility','finalize']},null,2)+'\n');
+console.log(JSON.stringify({status:'passed',jobId:job.id,modelRequests:0,tokens:0,physicalMatches:0}));

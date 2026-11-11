@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-11T06:51:35.447766+00:00",
+  "status": "passed",
+  "command": "node --experimental-vm-modules --test tests/backend-review.test.mjs",
+  "result": {
+    "tests": 20,
+    "passed": 20,
+    "failed": 0,
+    "skipped": 0,
+    "existing_replays_validated": 42
+  },
+  "scope": [
+    "Actual API route, authz, job-store, public-data and artifact-validation source loaded into an isolated VM context.",
+    "Real SQLite engine applies every checked-in Drizzle SQL migration; D1 binding behavior and R2 object store are in-memory adapters.",
+    "External ChatGPT identity is replaced by explicit owner, non-owner, anonymous and administrator fixtures; runner authentication code is executed unchanged.",
+    "Approval hash binding, submission idempotency, same-origin checks, ownership and runner credentials.",
+    "Concurrent claims, exact lease retry, lease expiration without requeue, cancellation races, old sequence compare-and-swap, terminal-state protection.",
+    "Exact finalization replay, unresolved-cost blocking, private artifact access, artifact bytes and job ownership, manifest audit-seed binding.",
+    "Cross-job replay route uniqueness and a lease expiring between R2 upload and SQL registration.",
+    "Strict nested schemas, evidence/model classification, fixed-I and same-H consistency, paired seeds and means, lineage integrity, policy-failed matches without fake replays.",
+    "V3 audit task failures preserve score zero and their cause; complete audits cannot carry a failure cause.",
+    "Replay identities, continuous frames, round totals, player IDs, terrain positions and mine ownership counts; public string path/credential filtering."
+  ],
+  "other_checks": {
+    "typescript": "passed: ./node_modules/.bin/tsc --noEmit --pretty false",
+    "eslint": "passed for lib/artifact-validation.ts and tests/backend-review.test.mjs"
+  },
+  "limits": [
+    "No paid model requests, real MoneCraft execution, Docker runs or external network requests were performed by this suite.",
+    "This is controlled source-level API integration testing, not a deployed Cloudflare D1/R2 test or an external identity-provider verification.",
+    "Race conditions are deterministic SQL interleavings injected immediately before updates/inserts; this is not a production load test.",
+    "Historical replay files are read-only validation fixtures; their validation does not rerun games or establish RSI gains.",
+    "String filters are defense in depth, not a proof that arbitrary model content is safe to publish; only the trusted allowlist publisher is authorized.",
+    "The current development execution container remains outside the safety scope of this review."
+  ],
+  "source_sha256": {
+    "lib/artifact-validation.ts": "sha256:18087736099c6a28bf9cbf9e2d850f021a145fb20b319e843cc429ea77b55871",
+    "lib/arena-types.ts": "sha256:bce4efceceaec7af80b1b5c90a308bbc90aa2d373d80567378ac80c8dd2fca97",
+    "lib/authz.ts": "sha256:e741c223082a0351d293de3a16186d517836f44d93dbc1c62b105153bded6d4f",
+    "lib/job-store.ts": "sha256:b081c64389cc37b9f471af82126222ed3045723e6d2e1fe3319522d595f53c59",
+    "lib/platform-contract.ts": "sha256:cc458509f31e2c59ec813ff84fadc4da39f19380caabfda3b99563d080ec5912",
+    "lib/public-data.ts": "sha256:49bdf89f0c7aa80f12504551262e18aae89b8fe721d65086e41103f1c952bf75",
+    "app/api/[...path]/route.ts": "sha256:31b2403fbd12b04a6b0f03104ca5dd8a17299f6fa99d9a866107215d78b324d5",
+    "tests/backend-review.test.mjs": "sha256:0b6587cf56b6e75a5bbdf150d6d4dcdb9a662be8ecc0d907262d00a597e27abb",
+    "drizzle/0000_warm_ender_wiggin.sql": "sha256:24328375bc991b28eafc3727c0c700230f16edb3be742a1d030b281cb207b372",
+    "drizzle/0001_slow_sir_ram.sql": "sha256:9cfe7c58d4ddad533beb8ba40ac541723431bd29faceab360960d00b6f8bcee2"
+  }
+}

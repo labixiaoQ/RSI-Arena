@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-11T07:38:27.206Z",
+  "jobId": "run-965765ae-792d-4664-b998-18adb13616db",
+  "scope": "local D1/R2 + real HTTP routes + real Gear fixture",
+  "status": "passed",
+  "actualModelRequests": 0,
+  "actualTokens": 0,
+  "actualGames": 0,
+  "simulatedBudget": {
+    "modelRequests": 0,
+    "tokens": 0,
+    "matches": 60,
+    "episodes": 10
+  },
+  "checks": [
+    "auth",
+    "strict inputs",
+    "UTF8 limits",
+    "idempotent submit",
+    "digest-bound approval",
+    "claim",
+    "lease heartbeat",
+    "Gear B/C I inheritance",
+    "artifact upload",
+    "private visibility",
+    "finalize"
+  ]
+}

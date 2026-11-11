@@ -1,0 +1,585 @@
+{
+  "version": "0.4.0",
+  "verified_at_utc": "2026-10-09T08:22:57.924611+00:00",
+  "evaluation_scope": "Full-pool authenticated HTTPS evaluation; public-subset local execution",
+  "published_players": 909,
+  "full_pool_players": 1920,
+  "release_acceptance": {
+    "passed": true,
+    "all_criteria_required": true,
+    "criteria": {
+      "historical_player_runtime_parity": {
+        "status": "passed",
+        "criterion": "Preserve original strategy files and decision limits; accept evidenced, cross-host-consistent original-policy failures with faithful reporting.",
+        "scope": "Recorded historical-success and failure cases, paired execution matrices, effective-input diagnostics and fixed hosted runtime. This is not a guarantee for every possible stochastic trajectory.",
+        "historical_candidate_hashes_verified": true,
+        "original_policy_archives_preserved": true,
+        "original_limits_preserved": true,
+        "error_classification": "Infrastructure and public SDK contracts verified by regressions; retained policy and bundled-SDK failure paths have paired evidence.",
+        "timing_boundary": "Original wall-time limits include initialization. Near-limit cold imports and wall-clock-seeded policies may vary across runs; these are retained, not relabelled as successful."
+      },
+      "remote_policy_submission": {
+        "status": "passed",
+        "small_games": 12,
+        "full_pool_games": 12,
+        "actual_complete_pool_matches": 3776,
+        "frozen_policy_hashes_verified": true,
+        "request_result_pool_hashes_verified": true,
+        "budgets_and_receipts_verified": true,
+        "dense_binary_boundary_verified": true,
+        "runtime_profiles_reported_separately": true
+      },
+      "local_release_package": {
+        "status": "passed",
+        "fresh_controller_environment": true,
+        "fresh_player_environment": true,
+        "independent_asset_extraction": true,
+        "local_games": 12,
+        "actual_matches": 52,
+        "runnable_starters": 22,
+        "local_agent_iteration": "Both native harnesses verified with real providers, workspace I/O, automatic compaction and session resume.",
+        "protocol_asset_regression": {
+          "fresh_asset_install_files": 3693,
+          "python_versions": [
+            "3.10.14",
+            "3.14.6"
+          ],
+          "focused_tests_passed": 20,
+          "additional_live_matches": 5,
+          "runnable_starters": 2
+        }
+      }
+    },
+    "public_visibility_requires_user_decision": true
+  },
+  "supported_platform": {
+    "os": "Debian 13 / x86-64 Linux with systemd isolation",
+    "controller_python": "3.14.6",
+    "player_python": "3.10.14",
+    "compiler": "Debian GCC/G++ 14.2.0-19",
+    "glibc": "2.41",
+    "other_platforms": "Use a compatible x86-64 Linux machine or virtual machine; native macOS, Windows and ARM execution is not certified."
+  },
+  "reference_environment": {
+    "system_snapshot": {
+      "files": 28332,
+      "matched": true,
+      "fingerprint": "ccef511da39a5b0d373e2ff93888cd1bb83744fb22250ed44be4983c573be5af",
+      "cloud_integrity_check": "passed"
+    },
+    "player_snapshot": {
+      "files": 36715,
+      "file_manifest_sha256": "b863cced85ff10eb11f196ada16f32015b332753df38c09661c76569c2356be3",
+      "matched": true
+    },
+    "backend_python": {
+      "status": "Verified reference bundle, production deployment, hosted execution and paired behavior evidence",
+      "python": "3.14.6",
+      "numpy": "2.3.5",
+      "matplotlib": "3.11.1",
+      "files": 9666,
+      "manifest_sha256": "f2d510e6f580574dcbdf5977c8c1543ba1d5a36c60fc88e8ea5d9f6bedcc52fb",
+      "real_host_preflight": "passed",
+      "paired_cases": 4,
+      "paired_statuses_match": true,
+      "rounds_identical": false,
+      "formal_results_from_different_backend_profiles_combined": false
+    },
+    "dependency_payload_integrity": {
+      "original_files_preserved_per_host": 38056,
+      "added_identical_payload_files": 669,
+      "additional_differences": "Three empty explicit-install REQUESTED markers and their RECORD entries",
+      "production_profile_deployed": true,
+      "dependency_payloads_match": true
+    },
+    "admission": {
+      "physical_cores": 8,
+      "logical_cpus": 16,
+      "concurrent_complete_matches": 3,
+      "small_reserved_slots": 1,
+      "decision_limits_unchanged": true
+    }
+  },
+  "hosted_api": {
+    "https_certificate_verified": true,
+    "health_games": 12,
+    "evaluation_profile": "turn-gate-material-sdk-v5",
+    "runtime_base_commit": "571ab30be43000f9fb81d32c31df7321e53b9ac4",
+    "leaf_file_hashes": {
+      "src/aa_arena/core/evaluator.py": "3c6edc6618d22ccf4d58a91058f653c4865192e447f2092b052267dde18a14df",
+      "games/antwar2/public_sdk/protocol.py": "ab113d63f1006bfcb2d4c4a70202902c17261fbddbbfa3c4e89fc1ccda863af4"
+    },
+    "policy_files_changed": false,
+    "independent_import_entrypoints_passed": 4
+  },
+  "remote_small": {
+    "passed": true,
+    "games": 12,
+    "submissions": 24,
+    "actual_matches": 46,
+    "feedback": [
+      "detailed",
+      "binary"
+    ],
+    "immutable_receipts_verified": true,
+    "model_calls": 0
+  },
+  "protocol_https_regression": {
+    "passed": true,
+    "submissions": 2,
+    "actual_matches": 4,
+    "game": "antwar2",
+    "receipts": [
+      {
+        "run_id": "1d9d3025660d4a9386580aa50ff89f40",
+        "submission_id": "a2288c80b6f042b3a7d3d6da07de8f98",
+        "pool_sha256": "73c46e52789dccb099225860558c328819673665d8f099e1372b0b648a403fd8",
+        "request_sha256": "52e000f1267cb294a850b220afee1bc403e7c0967705e3e6d4f0161a8b9fb5c2",
+        "result_sha256": "3109b254798d30f1cc3777aa16c82fe0ed761550215edc012572389649479b36",
+        "small_used": 1,
+        "large_used": 0,
+        "completed_at": 1791533757.968516
+      },
+      {
+        "run_id": "b5f8967710ff4a2bac31e134a4d4a6f0",
+        "submission_id": "18109d0ca95c44d68e727c00e91a6938",
+        "pool_sha256": "73c46e52789dccb099225860558c328819673665d8f099e1372b0b648a403fd8",
+        "request_sha256": "530c7bc92fe12322e5c837d5980d51323357062c540fad3ff00c292fe8661c6a",
+        "result_sha256": "d7064d221c12b17cf664a1a2288d5aa559fd5a89a28a9b93af3b482d2055742b",
+        "small_used": 1,
+        "large_used": 0,
+        "completed_at": 1791533817.7904425
+      }
+    ],
+    "strategy_budget_and_artifact_audit_passed": true,
+    "model_calls": 0
+  },
+  "complete_pool_matrix": {
+    "status": "execution_integrity_verified",
+    "release_acceptance_complete": true,
+    "opponents": 1920,
+    "matches": 3776,
+    "games": [
+      {
+        "game": "rollman",
+        "runtime_profile": "pinned-python-backend",
+        "source_commit": "13bb7f462a6e451b622cbc80db7db56e369ae348",
+        "opponents": 64,
+        "matches": 64,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 4,
+        "game_errors": 4,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "pacman",
+        "runtime_profile": "reference-native-cpp",
+        "source_commit": "1e2627d30cc4be1e64c127888f60ee27400cfb38",
+        "opponents": 44,
+        "matches": 88,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 3,
+        "game_errors": 3,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "antwar",
+        "runtime_profile": "pinned-python-backend",
+        "source_commit": "13bb7f462a6e451b622cbc80db7db56e369ae348",
+        "opponents": 114,
+        "matches": 228,
+        "execution_integrity_passed": true,
+        "candidate_errors": 6,
+        "opponent_errors": 12,
+        "game_errors": 13,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "aquawar",
+        "runtime_profile": "pinned-python-backend",
+        "source_commit": "13bb7f462a6e451b622cbc80db7db56e369ae348",
+        "opponents": 170,
+        "matches": 340,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 49,
+        "game_errors": 49,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "generals",
+        "runtime_profile": "pinned-python-backend",
+        "source_commit": "13bb7f462a6e451b622cbc80db7db56e369ae348",
+        "opponents": 197,
+        "matches": 394,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 34,
+        "game_errors": 34,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "lostspace",
+        "runtime_profile": "turn-gate-material-sdk-v5",
+        "source_commit": "571ab30be43000f9fb81d32c31df7321e53b9ac4",
+        "opponents": 111,
+        "matches": 222,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 55,
+        "game_errors": 55,
+        "infrastructure_retries": 0,
+        "receipt": {
+          "run_id": "c7ba961d75424db8862a4b4b391cda71",
+          "submission_id": "4628777cbf62406a8d9831b457a1e3c8",
+          "pool_sha256": "18fc8afd72b2e0cb7ea81247dc8713641d2e01d7c51c1bf18030ce2c5c309945",
+          "request_sha256": "679049bc10e1b91a3d3cbd9f682df529e279e95f84aaa80225850a07cfaedd02",
+          "result_sha256": "449d584b635a9a00e1aa36346c5ee2b3c9d57dd6b39bd3781f5ee911921e9abe",
+          "small_used": 1,
+          "large_used": 1,
+          "completed_at": 1791523688.154119
+        }
+      },
+      {
+        "game": "miracle",
+        "runtime_profile": "pinned-python-backend",
+        "source_commit": "13bb7f462a6e451b622cbc80db7db56e369ae348",
+        "opponents": 253,
+        "matches": 506,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 67,
+        "game_errors": 67,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "dorado",
+        "runtime_profile": "reference-native-cpp",
+        "source_commit": "1e2627d30cc4be1e64c127888f60ee27400cfb38",
+        "opponents": 323,
+        "matches": 646,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 47,
+        "game_errors": 47,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "monecraft",
+        "runtime_profile": "reference-native-cpp",
+        "source_commit": "1e2627d30cc4be1e64c127888f60ee27400cfb38",
+        "opponents": 112,
+        "matches": 224,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 31,
+        "game_errors": 31,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "lota",
+        "runtime_profile": "reference-native-cpp",
+        "source_commit": "1e2627d30cc4be1e64c127888f60ee27400cfb38",
+        "opponents": 200,
+        "matches": 400,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 23,
+        "game_errors": 23,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "snakego",
+        "runtime_profile": "pinned-python-backend",
+        "source_commit": "13bb7f462a6e451b622cbc80db7db56e369ae348",
+        "opponents": 141,
+        "matches": 282,
+        "execution_integrity_passed": true,
+        "candidate_errors": 3,
+        "opponent_errors": 18,
+        "game_errors": 21,
+        "infrastructure_retries": 0
+      },
+      {
+        "game": "antwar2",
+        "runtime_profile": "turn-gate-material-sdk-v5",
+        "source_commit": "571ab30be43000f9fb81d32c31df7321e53b9ac4",
+        "opponents": 191,
+        "matches": 382,
+        "execution_integrity_passed": true,
+        "candidate_errors": 0,
+        "opponent_errors": 9,
+        "game_errors": 9,
+        "infrastructure_retries": 0,
+        "receipt": {
+          "run_id": "03d0caa20a4c4b8a9fc01a3e05097c5f",
+          "submission_id": "f54b643b504047aba3700b2269b57abf",
+          "pool_sha256": "73c46e52789dccb099225860558c328819673665d8f099e1372b0b648a403fd8",
+          "request_sha256": "c657e790eba74c6ad5f09a1a82d9ef147746275354c7c63dcf5d2ce4ea577cb4",
+          "result_sha256": "ecc90dab2a45118306876883a4ea2bae8be9384465c4eba22e50d3160290e252",
+          "small_used": 1,
+          "large_used": 1,
+          "completed_at": 1791529294.5143378
+        }
+      }
+    ],
+    "interpretation": "SDK candidates, not model leaderboard scores. Recorded errors remain in the results. Profiles and immutable receipts identify each execution; Elo values are not pooled across profiles."
+  },
+  "native_harness_acceptance": {
+    "codex": {
+      "passed": true,
+      "complete": true,
+      "live_provider": true,
+      "automatic_compaction": true,
+      "manual_compact_called": false,
+      "resume_same_session": true,
+      "notes_preserved": true,
+      "small_used": 1,
+      "large_used": 1,
+      "frozen_final_snapshot": "8a20023815396b6ea020bac8a9d3bc044cc1247efb078ebca40c126dfad9ea75",
+      "official_cli": "0.147.0",
+      "production_context_setting": 200000,
+      "test_context_setting": 20000
+    },
+    "claude": {
+      "passed": true,
+      "complete": true,
+      "live_provider": true,
+      "automatic_compaction": true,
+      "manual_compact_called": false,
+      "resume_same_session": true,
+      "notes_preserved": true,
+      "small_used": 1,
+      "large_used": 1,
+      "frozen_final_snapshot": "dac674430b73afe2002fbe3f93144fa71464e8b4b9eb808efef57b73a400cb3d",
+      "official_cli": "2.1.231",
+      "production_context_setting": 200000,
+      "test_context_setting": 100000,
+      "compaction_tokens": [
+        {
+          "trigger": "auto",
+          "before": 88620,
+          "after": 411
+        }
+      ]
+    }
+  },
+  "local_setup": {
+    "passed": true,
+    "games": 12,
+    "actual_matches": 52,
+    "runnable_starters": 22,
+    "model_calls": 0,
+    "fresh_controller": true,
+    "independent_asset_extraction": true,
+    "player_environment": "fresh Conda Python 3.10.14 environment; direct requirement pins and pip check verified",
+    "activation_created": true,
+    "controller_python": "Python 3.14.6",
+    "focused_tests_passed": 15,
+    "command": "python3 scripts/setup_local.py",
+    "fresh_player": true,
+    "manifest_files_verified": 271,
+    "archive_sha256": "f9392b54bd2e76f95eb00feec57526c399e560e9ede8f14ef791791b5dc35262",
+    "download_index": "https://mirrors.ustc.edu.cn/pypi/simple",
+    "source_commit": "8549840231bae1112071cd3a50ea7acd90a683cc"
+  },
+  "component_suite": {
+    "passed": 737,
+    "skipped": 1,
+    "deselected": 32
+  },
+  "targeted_suite": {
+    "passed": 70,
+    "skipped": 12
+  },
+  "api_suite": {
+    "passed": 37
+  },
+  "paired_behavior_evidence": {
+    "lostspace": {
+      "passed": true,
+      "scope": "Player execution and failure-path consistency, not byte-identical stochastic trajectories or Elo.",
+      "paired_matches": 222,
+      "opponents": 111,
+      "same_candidate_opponent_hashes": true,
+      "same_seeds": true,
+      "reference_infrastructure_exceptions": 0,
+      "hosted_infrastructure_retries": 0,
+      "identical_complete_replays": 196,
+      "same_player_error_labels": 205,
+      "same_failure_path_with_timeout_vs_stack_failure": 17,
+      "failure_path_matching_binaries": true,
+      "reference_error_matches": 55,
+      "hosted_error_matches": 55,
+      "policy_code_and_limits_preserved": true,
+      "official_error_labels_preserved": true
+    },
+    "antwar2_timeout": {
+      "passed": true,
+      "input_sha256": "d41610155f59b8eb868ef7bc0e4facd1bcfabea13b06a7e75fdc2b985f48d5fa",
+      "stdout_sha256": "583522c5642760a2e24f58a68428808f848aaf08b82c89cee88c95876eec4de9",
+      "reference_wall_seconds": 11.5836027386,
+      "hosted_wall_seconds": 10.975835416,
+      "formal_limit_seconds": 10,
+      "original_policy_preserved": true,
+      "formal_limit_preserved": true,
+      "diagnostic_output_not_a_formal_success": true,
+      "classification": "Original policy computation exceeds its decision limit on both hosts."
+    },
+    "antwar2_rules": {
+      "paired_matches": 8,
+      "same_sources_seeds": true,
+      "undefined_operation_errors_reproduced_both_hosts": 6,
+      "bundled_protocol_failure": "Python 3.10 IntEnum argument formatted as TowerType.PRODUCER; native referee requires decimal integers.",
+      "public_protocol": "Explicit integer serialization verified on Python 3.10 and 3.14.",
+      "frozen_state_refund": {
+        "coins": 47,
+        "owned_basic_towers": 3,
+        "original_bundled_sdk_refund": 54,
+        "official_refund": 40,
+        "storm_cost": 90,
+        "original_sdk_accepts_on_both_hosts": true,
+        "official_balance_insufficient": true
+      },
+      "original_player_packages_preserved": true
+    },
+    "snakego_duplex": [
+      {
+        "opponent_id": "anon__710a5f8e1d0c626b__20dccb0241af6e0b__v18",
+        "duplex_sha256": "234827bade1f490be636cd84dd09d8d35b6b0cc17a0c5d0b21b304184c359d11",
+        "matched_output_chunks": 36,
+        "paired_terminal": "exit 255",
+        "both_hosts_verified": true
+      },
+      {
+        "opponent_id": "anon__f754c5dc2661133a__fd086098d133b165__v1",
+        "duplex_sha256": "36e619168004f4ba13f9d05143ba79e043266d42a949831e51858251897e1675",
+        "matched_output_chunks": 30,
+        "paired_terminal": "blocked waiting for input beyond unchanged three-second limit",
+        "both_hosts_verified": true
+      },
+      {
+        "opponent_id": "ouuan__ent_40b8b2ed1bae321b__v2",
+        "duplex_sha256": "c7d19fb41987853471674ec579d64aa76ad577717e183eaee41b762050be7427",
+        "matched_output_chunks": 70,
+        "paired_terminal": "blocked waiting for input beyond unchanged three-second limit",
+        "both_hosts_verified": true
+      },
+      {
+        "opponent_id": "wenjie2002__ent_3413fb5172a742b8__v1",
+        "duplex_sha256": "94d5520b09d55c8988022be4306654849abbc5d44e6a399fa2c834fe4f97f425",
+        "matched_output_chunks": 34,
+        "paired_terminal": "blocked waiting for input beyond unchanged three-second limit",
+        "both_hosts_verified": true
+      },
+      {
+        "opponent_id": "wenjie2002__ent_57c673c467cd282b__v1",
+        "duplex_sha256": "fe58f40e2898a20f2f9cc520641c20eaeb3164ad4d608014dbf90329a810f27d",
+        "matched_output_chunks": 48,
+        "paired_terminal": "exit 255",
+        "both_hosts_verified": true
+      }
+    ],
+    "aquawar_action": {
+      "same_source_binary_and_input": true,
+      "paired_output": {
+        "round": 2,
+        "action_fish": 0,
+        "action_type": -1
+      },
+      "classification": "Original action policy lacks a fish-2 branch and returns an invalid action type for the recorded round-2 state.",
+      "frozen_input_sha256": "9330667ddacdeac68313faad6b632ede420c1a7738b0ae86becec907db40aa8f"
+    },
+    "generals_private_extension": {
+      "same_input_output_and_exception": true,
+      "exception": "IndexError in original bundled generals_impact_game/initiator.py",
+      "public_sdk_contains_extension": false
+    },
+    "generals_startup": {
+      "same_source_input_legal_output": true,
+      "reference_first_read_s": 0.959,
+      "hosted_first_read_s": 0.818,
+      "formal_limit_s": 1,
+      "cold_import_observation": "Original top-level torch import consumes most of the first-turn allowance; cold timing can cross the limit. No limit is relaxed."
+    },
+    "clock_and_map_controls": {
+      "lota_fixed_clock_complete_replay_equal": true,
+      "lota_rounds": 385,
+      "rollman_recorded_success_map_completed_both_hosts": true,
+      "rollman_unseeded_actions_retained": true,
+      "pacman_effective_seed_success_trace_reconstructed": true,
+      "formal_rng_overridden": false
+    },
+    "supplemental": {
+      "passed": true,
+      "original_policy_and_limits_preserved": true,
+      "api_submissions": 0,
+      "model_calls": 0,
+      "aquawar": {
+        "same_binary": true,
+        "same_input": true,
+        "same_native_trace": true,
+        "binary_sha256": "a63bbd84464e18e880fd16679febaac1712bdfa384ff8b8e012c4b172da004bc",
+        "input_sha256": "11f3de658a8c7c1b8ea064ced0a6ae4acd83d708dadcae5746a0ac069e507d60",
+        "classification": "original policy missing return triggers GCC ud2",
+        "policy_or_limits_changed": false
+      },
+      "snakego": {
+        "same_binary": true,
+        "same_input": true,
+        "same_native_trace": true,
+        "binary_sha256": "bfc3692ee68cadb183ed0c515ec2303bba144adc22e3cf5fc37b7399221e9eef",
+        "input_sha256": "ea5cd1d818872a6042e5bf485cc9a572058cbf46513e57d6efcc5140641819eb",
+        "classification": "original player-bundled SDK operation-history vector out of bounds; public SDK does not contain this insertion",
+        "policy_or_limits_changed": false
+      },
+      "miracle": {
+        "same_sources": true,
+        "same_input": true,
+        "same_output": true,
+        "input_sha256": "0792ee3d12110aac3ab31cdb9dce8cf45ec95f9f25d7520b63f55de15316da5d",
+        "policy_main_sha256": "ffe67294b20725d8b2cecde0f1821416b6810abf70ba24796523acc9cb57ac05",
+        "diagnostic_random_seed": 2,
+        "branch": "Original play() samples randint(0,9); values below 2 enter an infinite loop. Both hosts exceed the unchanged three-second deadline on this branch.",
+        "formal_rng_not_overridden": true
+      },
+      "provenance_scope": "Frozen original source files match reference and hosted pool manifests. Source files are untracked in the historical Git checkout; no Git revision provenance is asserted."
+    },
+    "failure_interpretation": "Official crashes, illegal actions and timeouts remain failures. Native memory-safety signals establish the observed process behavior; diagnostics do not assert an exact source statement when a sanitizer cannot reproduce it."
+  },
+  "evidence_sha256": {
+    "v5-small-audit.json": "6d1f25e02d57e2bd94067012588b4c61446c18a95a02833c305d26daeec8c7d9",
+    "v5-full-audit.json": "88b0492d5184bcdebf01f060dc2f4bb33585e9e8abc08685fd44dd50b97479da",
+    "final-protocol-small-audit.json": "26a62e48fbeaf11c785158d6eeef9b6cce36c8fa4fec1a55c216ebf320fa3670",
+    "final-protocol-deployed.json": "f8f093f958f07a552902e84c0b22ce5c767650ee653705e14da98916c507fe6f",
+    "clean-reader-full-install-result.json": "c0e294ffd0ac27683e58a8831fa49de2c6ae80971370bdea0f5067d882f4a314",
+    "final-protocol-local-checks.json": "d5005369a33f72094155ccdb8b52e96c79bb6a087646a06808e9d6c5ae434c39",
+    "lostspace-v5-parity-acceptance.json": "acd21927416ad9498d35f4a3366e2fd3676d12750b1941be484562b6b8199957",
+    "antwar2-frozen-input-comparison.json": "bd367feee0e21e8662a865733c032db0d5cf069871136c805bae6c96633d17d1",
+    "antwar2-v5-rule-parity.json": "e9c9da24e07fb9adf5d9e949683001d044aa7b13f80d79769eb981a4bead8ae0",
+    "antwar2-rule-proof-agentlab.json": "b1ed08d2c6062c004402b385c0147708e33bd62928b1f2f9cc5115269dccfd44",
+    "antwar2-rule-proof-aa-arena-cloud.json": "b1ed08d2c6062c004402b385c0147708e33bd62928b1f2f9cc5115269dccfd44",
+    "yswinner-action-lab.json": "01ad9ec112a3bb88628ead33a26e3554cae93efa76ba3c91cd9614a456cf10fc",
+    "yswinner-action-cloud.json": "2cf12e31d83aa2714b41049d906ef310d0c396806f48ada6e8d235bc2552ea71",
+    "crossgame-duplex-terminal-lab.json": "d6a921f9226fa1418621d0b10e15e06d2240f926c6fe6a31324d5967442b7043",
+    "crossgame-duplex-terminal-cloud.json": "d894c5a35fe486375f6d762369a1e998e7f8d9d933875316ee117afcb7f05af7",
+    "duplex-symbol-stacks-lab.json": "93af231cc60b643d8db326a92f38e6b059f29b9fa3a1e3c1ac2de4b96b2585e9",
+    "duplex-sdk-provenance.json": "1055b1bebbde0bce8cd206eddf81393662e41fe39e0fe5ab30f8fcae8cc4f7c8",
+    "generals-initiator-sdk-provenance.json": "e41cf992e84cb0cf3b9a7b43c6014c083e31e32c63b6db674d114acf7f429ee9",
+    "generals-frozen-startup-comparison.json": "08d350ba5f88b4813efdf16aefc1dfb522b0c2325c141a673efe1d9af4248579",
+    "supplemental-frozen-parity-classification.json": "dece887a1ba7f38378a105a67296029ed1bd24a396250124fd132883e8282bf9",
+    "rollman-recorded-map-comparison.json": "af1de7ebc85a82e5c0df85a57b1e938297bf453182886ec4e7ef39e4a0df32b0",
+    "lota-fixed-clock-comparison.json": "d4326b33ce61adf75fcbd7f438671664dc90777f77a7f058e9d2f4a12469a285",
+    "native-final-comparison.json": "9ec54318b5beb4a1fcf9a58fce281c67a7c4e46e7904cbb6ef58c7c0970d0b55",
+    "generals-cap3-repetitions.json": "280308f78d12160d291b730f06f50464c4fed12a3bd8cd07dba8d1d78eb9c50d",
+    "champion-cloud-cap6-probe-progress.json": "0185ff828d6d4be1f70293618512db4fe2aaca370f43e48490ddc964ba66d5f9"
+  },
+  "offpolicy_hosted_catalog": "not provisioned",
+  "limitations": [
+    "Full-pool off-policy replay catalogue is unavailable; public-subset local catalogue generation is supported.",
+    "Original strategies may crash, time out, issue illegal actions or depend on wall-clock randomness. No strategy or decision limit is changed to manufacture a pass.",
+    "A passing smoke test does not guarantee identical stochastic Elo scores, identical hardware wall time or compatibility with every external model provider."
+  ]
+}

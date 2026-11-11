@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-11",
+  "status": "engineering_validation_passed_live_comparison_pending_authorization",
+  "scope": "Gear + MoneCraft feedback-learning protocol v2",
+  "upstream": {
+    "gear": "11bad082e1163d12caf2f955125d596f40b395f1",
+    "aaarena": "fd52d2337b6711f0f3a239216f48720c125750be"
+  },
+  "runtime_image": "sha256:363c67d8186b9a13cb4898f191389ade38d2d534f74dca7e2632659a341cf6f7",
+  "sdk_sha256": "c878921c8a81c5faffbb4c0800526d16ffb8baa0ab7b1ec22a900d46beea6432",
+  "judge_sha256": "4bfe6933def965a948705eb8513059f8bcea763a20a22c0d48faee3f5f247a1e",
+  "implementation": "sha256:185612a03403311604844eec697d43615350c91ccfd3cc419a1fa3e26cdfbee0",
+  "source_sha256": {
+    "examples/arena/compare.mjs": "e57ff18df8d24004c0dbe02ce5036371f17316b99c0c38e384cfcafbaa53aef4",
+    "examples/arena/monecraft-contract.txt": "3e381927a073cb6afa0a4e36b60f0699e283df80f18c1ae765688ae8cfcda36c",
+    "examples/arena/runtime/contract-probe.cpp": "221675f31132f689615698de226c525da7a996e41d82280a2f4d89dc7f432c05",
+    "examples/arena/runtime/match.py": "340de090c87837894a61617ffe6574b1c17fe2961210a84f1286720db00a7c56",
+    "examples/arena/validate-learning.mjs": "173c90fbafb78f58244d7fc18e04bdc63fb5282fc7702290c35d90253f2d8e19",
+    "src/adapters/arena/agent.ts": "588c5900e30d373d3077fe24ed9c4b17917c071cff10aa3adf0d36ebb44e8a9c",
+    "src/adapters/arena/budget.ts": "3d037175dec549eecc60ab58f5d7829bd8d2dd1827e49aeb9387e14283133d26",
+    "src/adapters/arena/comparison.ts": "e33abf6821181e6b2248dc013cbb09de84b8aa08d63b2ca157c2664b9df214e7",
+    "src/adapters/arena/contracts.ts": "a7e6681ca1439c2c9d6e14e13bf3b69546a13703b43a054d04c6372b36eb8115",
+    "src/adapters/arena/coordinator.ts": "f2370413484f839ca8ce6511d43ed03e5ed449ce30c5e191a421431ad3bec04d",
+    "src/adapters/arena/episode.ts": "890b33c4d300094f1438ff624585e597748c07832f1832760db153245e6ad2fe",
+    "src/adapters/arena/harness.ts": "fa094076fdc2e47601d2b6dc18f4fa4a0711cb288dd00defec4b2a454ace2c25",
+    "src/adapters/arena/linear.ts": "746446952c4f351421f8ccdb459c2853e2057bcf6b9815f6136f19321c2e8282",
+    "src/adapters/arena/model.ts": "7771bad2af645651b4c16d767f334696b94ba4c8d1899b87dc5208c8fbd3c266",
+    "src/adapters/arena/monecraft.ts": "0ad8765d1e380004d2aa06d02609db46b3a41dc6b9df223b073847b5bf00df12",
+    "src/adapters/arena/planner.ts": "b4279a05b6af14a4d428585a7720dcdbb853f679c7d0c86f7798597ed18e4a63",
+    "src/adapters/arena/provider.ts": "153b11436ed6bc737dc73396a7ad8f1dd9dccad27bc6776a97c65784e466c479",
+    "src/arena.ts": "c4ac7fead2b483b382728b728cc9c51db5753975a7e9faf02f8b3e1d43b27f01"
+  },
+  "automated_checks": {
+    "arena_tests": 30,
+    "typecheck": "passed",
+    "boundaries": "passed",
+    "wire_contracts": "passed",
+    "installed_public_api_package": "passed"
+  },
+  "behavior_contract_checks": [
+    "directions",
+    "blocked_move",
+    "blink_range_and_cooldown",
+    "capture_both_seats",
+    "protection",
+    "observer_cost_and_old_position",
+    "visibility",
+    "winner_and_error"
+  ],
+  "controlled_real_judge": {
+    "path": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/learning-v2-final-20261111",
+    "evidence_sha256": "a509cab8f2ccf4f0189178651e4bb2513b314e7598fe090cae6f9976f39cdb20",
+    "checks": [
+      "one-I-call",
+      "compile-repair",
+      "training-feedback-used",
+      "movement-and-capture-after-revision",
+      "no-replay-on-resume"
+    ],
+    "budget": {
+      "limits": {
+        "agent_calls": 4,
+        "model_requests": 0,
+        "tokens": 0,
+        "episodes": 1,
+        "matches": 6
+      },
+      "charged": {
+        "agent_calls": 4,
+        "model_requests": 0,
+        "tokens": 0,
+        "episodes": 1,
+        "matches": 6
+      },
+      "observed": {
+        "agent_calls": 4,
+        "model_requests": 0,
+        "tokens": 0,
+        "episodes": 1,
+        "matches": 6
+      },
+      "unknown": [],
+      "deadline": 1794374883386
+    },
+    "stages": [
+      {
+        "stage": "generate",
+        "policy_digest": "sha256:2cffbb30fca005f6eaf2f798845e4e6996e909b170ffe37df416b2e6d141356d",
+        "compile": {
+          "status": "policy_failed",
+          "diagnostics": "/workspace/ai.cpp:1:1: error: 'deliberate' does not name a type\n    1 | deliberate syntax error for bounded repair\n      | ^~~~~~~~~~\n"
+        }
+      },
+      {
+        "stage": "repair",
+        "policy_digest": "sha256:9bc5baafd8d1958deebefaf8de74ff96d63093758b81b08e22340720dafd1381",
+        "compile": {
+          "status": "ready",
+          "diagnostics": ""
+        }
+      },
+      {
+        "stage": "revise",
+        "policy_digest": "sha256:176f1722bc6735a1a1f0143a94d061734efee87f36375ef2db122114bf69d6b2",
+        "compile": {
+          "status": "ready",
+          "diagnostics": ""
+        }
+      }
+    ],
+    "training": [
+      {
+        "seat": 0,
+        "score": 0.5,
+        "own_behavior": {
+          "moved_turns": 0,
+          "unique_positions": 1,
+          "longest_stationary_streak": 1000,
+          "first_capture_round": null,
+          "final_gold": 0,
+          "final_mines": 0
+        }
+      },
+      {
+        "seat": 1,
+        "score": 0.5,
+        "own_behavior": {
+          "moved_turns": 0,
+          "unique_positions": 1,
+          "longest_stationary_streak": 1000,
+          "first_capture_round": null,
+          "final_gold": 0,
+          "final_mines": 0
+        }
+      }
+    ],
+    "scoring": [
+      {
+        "score": 1,
+        "own_behavior": {
+          "moved_turns": 326,
+          "unique_positions": 240,
+          "longest_stationary_streak": 644,
+          "first_capture_round": 26,
+          "final_gold": 52350,
+          "final_mines": 6
+        },
+        "rounds": 1000,
+        "terminal": {
+          "type": "normal",
+          "winner": 0
+        }
+      },
+      {
+        "score": 1,
+        "own_behavior": {
+          "moved_turns": 344,
+          "unique_positions": 240,
+          "longest_stationary_streak": 626,
+          "first_capture_round": 28,
+          "final_gold": 53290,
+          "final_mines": 6
+        },
+        "rounds": 1000,
+        "terminal": {
+          "type": "normal",
+          "winner": 1
+        }
+      },
+      {
+        "score": 1,
+        "own_behavior": {
+          "moved_turns": 102,
+          "unique_positions": 69,
+          "longest_stationary_streak": 801,
+          "first_capture_round": 26,
+          "final_gold": 620,
+          "final_mines": 0
+        },
+        "rounds": 1000,
+        "terminal": {
+          "type": "normal",
+          "winner": 0
+        }
+      },
+      {
+        "score": 0,
+        "own_behavior": {
+          "moved_turns": 277,
+          "unique_positions": 59,
+          "longest_stationary_streak": 81,
+          "first_capture_round": 28,
+          "final_gold": 3250,
+          "final_mines": 0
+        },
+        "rounds": 1000,
+        "terminal": {
+          "type": "normal",
+          "winner": 0
+        }
+      }
+    ],
+    "score": 0.75
+  },
+  "engineering_runs_this_turn": {
+    "completed_matches": 12,
+    "paid_model_requests": 0,
+    "note": "Six-game initial validation plus six-game final-source validation; separate from prior real model trial."
+  },
+  "live_trial_prior": {
+    "charged": {
+      "model_requests": 17,
+      "tokens": 27393,
+      "matches": 27
+    },
+    "unchanged": true
+  },
+  "proposed_live_comparison": {
+    "path": "/Users/chengrenmin/work/gamebenchamrk/gear/arena-runs/comparison-v2-pilot-20261111/plan.json",
+    "plan_sha256": "13bcdb9c20b5a4724884a50f31df11bc85ade2c1c6ed172426ef03bfa2cfc3cc",
+    "plan": {
+      "epochs": 1,
+      "audit_seeds": [
+        31,
+        47
+      ],
+      "per_generation": {
+        "agent_calls": 17,
+        "model_requests": 17,
+        "tokens": 557056,
+        "episodes": 4,
+        "matches": 24
+      },
+      "per_arm": {
+        "agent_calls": 17,
+        "model_requests": 17,
+        "tokens": 557056,
+        "episodes": 4,
+        "matches": 24
+      },
+      "per_audit": {
+        "agent_calls": 8,
+        "model_requests": 8,
+        "tokens": 262144,
+        "episodes": 2,
+        "matches": 12
+      },
+      "total": {
+        "agent_calls": 50,
+        "model_requests": 50,
+        "tokens": 1638400,
+        "episodes": 12,
+        "matches": 72
+      },
+      "interpretation": "A paired pilot compares frozen harnesses; it does not establish statistical significance or general RSI superiority."
+    },
+    "status": "awaiting_explicit_new_budget"
+  },
+  "limitations": [
+    "Controlled policy replacement does not show autonomous model learning or RSI gain.",
+    "No real v2 B/C experiment yet.",
+    "Two audit seeds and a fixed opponent pool cannot establish statistical significance or broad generalization.",
+    "Mac Rosetta development runtime is not the reference Linux timing/isolation profile."
+  ]
+}

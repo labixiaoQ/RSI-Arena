@@ -1,0 +1,10 @@
+.npm-cache
+.pip-cache
+gear/.git
+gear/node_modules
+gear/.venv
+gear/arena-runs
+gear/lib
+aaarena/.git
+aaarena/data
+**/__pycache__

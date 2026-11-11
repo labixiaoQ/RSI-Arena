@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": true
+  },
+  "include": [
+    "src/index.ts",
+    "src/arena.ts",
+    "src/cli.ts",
+    "src/skill/index.ts",
+    "src/training/index.ts",
+    "src/adapters/codex/runner.ts"
+  ],
+  "exclude": ["tests"]
+}

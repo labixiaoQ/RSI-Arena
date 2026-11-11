@@ -1,0 +1,9 @@
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.env*
+**/.dev.vars*
+**/*.pem
+**/*.key
+**/.DS_Store
+/.diagram-venv/

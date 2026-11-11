@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-11",
+  "status": "completed_one_valid_epoch",
+  "model": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "requested_initial_epochs": 2,
+  "valid_epochs": 1,
+  "scope_note": "SDK repairs consumed budget. Remaining model requests are fewer than the minimum five needed for another complete generation. No cap was increased.",
+  "decision": "rejected",
+  "improvement_observed": false,
+  "accepted_improver_inheritance_observed_in_live_run": false,
+  "formal_hidden_test": "not_implemented",
+  "valid_run": "arena-runs/deepseek-final-20261111",
+  "valid_run_budget": {
+    "limits": {
+      "agent_calls": 6,
+      "model_requests": 6,
+      "tokens": 130269,
+      "episodes": 14,
+      "matches": 21
+    },
+    "charged": {
+      "agent_calls": 5,
+      "model_requests": 5,
+      "tokens": 7662,
+      "episodes": 2,
+      "matches": 8
+    },
+    "observed": {
+      "agent_calls": 5,
+      "model_requests": 5,
+      "tokens": 7662,
+      "episodes": 2,
+      "matches": 8
+    },
+    "unknown": [],
+    "deadline": 1794376081499
+  },
+  "aggregate_authorization_budget": {
+    "total_caps": {
+      "agent_calls": 20,
+      "model_requests": 20,
+      "tokens": 150000,
+      "episodes": 20,
+      "matches": 40
+    },
+    "charged": {
+      "agent_calls": 19,
+      "model_requests": 17,
+      "tokens": 27393,
+      "episodes": 8,
+      "matches": 27
+    },
+    "observed": {
+      "agent_calls": 19,
+      "model_requests": 17,
+      "tokens": 27393,
+      "episodes": 8,
+      "matches": 25
+    },
+    "remaining": {
+      "agent_calls": 1,
+      "model_requests": 3,
+      "tokens": 122607,
+      "episodes": 12,
+      "matches": 13
+    },
+    "retired_unconfirmed_matches": [
+      "run_4b02db509a0e0df177bcc03b9a448b54/sha256:cadbbd977bd4652cbd9c377df62281a0d4af42a45c4f16b679bf2b1ac6460ec5/dev-7/0/match-0-0",
+      "run_aadc35cb3ea2702a4f375708c16cc322/sha256:237c81f9ea42823786eca92915249f58174ceacf6bba4b3db8b7006267f4bb83/gate-23/0/match-0-1"
+    ],
+    "current_unconfirmed": [],
+    "source_reports": [
+      "arena-runs/deepseek-20261111/report.json",
+      "arena-runs/deepseek-sdk-fixed-20261111/report.json",
+      "arena-runs/deepseek-final-20261111/report.json"
+    ]
+  },
+  "measurements": [
+    {
+      "improver": "sha256:06f6ce3250ae4cdd0c3a125085856b42f6254926e632a9531cdedc44235cc247",
+      "executor": "sha256:3f6482ffabd86575e27f20bc5a187f6a5a498d14c18af58cd4e3ed78f124d87a",
+      "score": 0.25,
+      "games": [
+        0.5,
+        0.5,
+        0,
+        0
+      ]
+    },
+    {
+      "improver": "sha256:3184409ef8be5f6766336c8f9bd1c815f598837330ea80c12f1cc25e30314485",
+      "executor": "sha256:9b5ed4c35cc2a5259cd4157608b766d743e36a651948435eef3f0fb9e0ceb191",
+      "score": 0.25,
+      "games": [
+        0.5,
+        0.5,
+        0,
+        0
+      ]
+    }
+  ],
+  "resume_check": {
+    "passed": true,
+    "new_model_requests": 0,
+    "new_matches": 0,
+    "budget_unchanged": true
+  },
+  "sdk_compile_check": {
+    "checks": {
+      "policy-0.cpp": true,
+      "policy-1.cpp": true,
+      "policy-2.cpp": true,
+      "policy-3.cpp": true,
+      "policy-4.cpp": true,
+      "sdk-probe.cpp": true,
+      "undefined_rejected": true
+    },
+    "game_invocations": 0,
+    "model_requests": 0
+  },
+  "tests": {
+    "arena_and_model_and_continuation": 21,
+    "gear_controller_and_objective_previous_pass": 33,
+    "total": 54,
+    "typecheck": true,
+    "installed_package_api": true
+  },
+  "runtime_profile": "development-container; not AAArena reference profile",
+  "interpretation": "Both anchor and candidate drew twice against stop and lost twice against the public SDK reference. This run demonstrates execution and rejection behavior, not autonomous RSI gains.",
+  "image_id": "sha256:40be09bd6785432928745308521c32d9cd57f4d7afb6c0df40f9cccf86c08e6f",
+  "runtime_source_sha256": {
+    "examples/arena/runtime/match.py": "597b0d0208727de9d6931621d9fe3d0cad8493ece0d185b706fec1372a095680",
+    "examples/arena/runtime/sdk-globals.cpp": "e0cc097fdabff99ebcae30189406e88475e201be77e6495e5ae3c47179b596e5",
+    "examples/arena/runtime/Dockerfile": "4a54a9ff1df9ff9310dc19f4c4e1e4a87e822905f32f8f00cd7be34b829dec69",
+    "examples/arena/runtime/Dockerfile.rosetta": "f8850f1efde228be3c1a6d4f628d9423b8207d857952bed6797da913f5de33fc",
+    "examples/arena/run.mjs": "fadaf7b7d006937fa3c9f340e04fa868c76fbb63e4f2f95814cb74d763d91b8b",
+    "examples/arena/continuation.mjs": "b9c605f78408cfdf79202cd828db44a020430e0a21d7138fb35104cbe65fb02e"
+  }
+}

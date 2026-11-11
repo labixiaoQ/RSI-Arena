@@ -1,0 +1,144 @@
+{
+  "date": "2026-11-11",
+  "scope": "controlled-improver-with-real-MoneCraft-development-runner",
+  "autonomous_rsi_claim": false,
+  "formal_hidden_test": "not_implemented",
+  "gear_base": "11bad082e1163d12caf2f955125d596f40b395f1",
+  "aaarena_base": "fd52d2337b6711f0f3a239216f48720c125750be",
+  "image_id": "sha256:8d8edfd1e4eb5ec1cb972753d5cce23bed17383d223511055141d1b7ddfffdba",
+  "experiment_identity": "sha256:596def8ac58445a8c590e169acdd4f1bf58e5f032313f022843fb27e522646cd",
+  "experiment_directory": "arena-runs/fixture-memory-20261111",
+  "tests": {
+    "arena": 14,
+    "model_adapter_without_network": 3,
+    "gear_controller_and_objective": 33,
+    "total": 50,
+    "typecheck": true,
+    "boundaries": true,
+    "contracts": true,
+    "format_changed_files": true,
+    "installed_package_api": true
+  },
+  "epochs": [
+    {
+      "epoch": 0,
+      "gate": "accepted",
+      "active_improver": "sha256:0363ad4315cfaa7b720ec4df16cf22bbde864817f7ee5917da8d113fdcd28700",
+      "retained_improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+      "measurements": [
+        {
+          "task": "gate-23",
+          "improver": "sha256:0363ad4315cfaa7b720ec4df16cf22bbde864817f7ee5917da8d113fdcd28700",
+          "score": 0.25
+        },
+        {
+          "task": "gate-23",
+          "improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+          "score": 0.75
+        },
+        {
+          "task": "dev-7",
+          "improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+          "score": 1
+        },
+        {
+          "task": "dev-7",
+          "improver": "sha256:0363ad4315cfaa7b720ec4df16cf22bbde864817f7ee5917da8d113fdcd28700",
+          "score": 0.25
+        }
+      ]
+    },
+    {
+      "epoch": 1,
+      "gate": "rejected",
+      "active_improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+      "retained_improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+      "measurements": [
+        {
+          "task": "dev-7",
+          "improver": "sha256:8a6e40ea4e5bebd139de6fbeaf2260184dd30c37208ea1d9286098a2c751679e",
+          "score": 0.75
+        },
+        {
+          "task": "dev-7",
+          "improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "epoch": 2,
+      "gate": "rejected",
+      "active_improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+      "retained_improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+      "measurements": [
+        {
+          "task": "dev-7",
+          "improver": "sha256:b9d866e8d1b80b689f6d44c8306eee0ba4e7e9cbfe25a6bb19df75895cad42b5",
+          "score": 1
+        },
+        {
+          "task": "dev-7",
+          "improver": "sha256:8a6e40ea4e5bebd139de6fbeaf2260184dd30c37208ea1d9286098a2c751679e",
+          "score": 0.75
+        }
+      ]
+    }
+  ],
+  "budget": {
+    "limits": {
+      "agent_calls": 30,
+      "model_requests": 0,
+      "tokens": 0,
+      "episodes": 20,
+      "matches": 60
+    },
+    "charged": {
+      "agent_calls": 19,
+      "model_requests": 0,
+      "tokens": 0,
+      "episodes": 8,
+      "matches": 32
+    },
+    "observed": {
+      "agent_calls": 19,
+      "model_requests": 0,
+      "tokens": 0,
+      "episodes": 8,
+      "matches": 32
+    },
+    "unknown": [],
+    "deadline": 1794374243099
+  },
+  "recovery": {
+    "passed": true,
+    "new_agent_calls": 0,
+    "new_matches": 0,
+    "budget_unchanged": true
+  },
+  "earlier_calibration": {
+    "directory": "arena-runs/fixture-20261111",
+    "reason": "Baseline forgot observed terrain; stopped after two rejected epochs. Evidence retained; no budget reset.",
+    "status": "needs_recovery",
+    "charged": {
+      "agent_calls": 12,
+      "model_requests": 0,
+      "tokens": 0,
+      "episodes": 5,
+      "matches": 18
+    },
+    "observed": {
+      "agent_calls": 12,
+      "model_requests": 0,
+      "tokens": 0,
+      "episodes": 5,
+      "matches": 17
+    },
+    "unconfirmed_operations": 1
+  },
+  "live_deepseek": {
+    "status": "authorized_and_completed_one_valid_epoch",
+    "report": "arena-deepseek-2026-11-11.json",
+    "model_requests": 17
+  }
+}

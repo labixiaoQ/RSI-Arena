@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-11-11T07:05:31.943458+00:00",
+  "changes": [
+    "Use ordinary document links after deployed Vinext prefetch TypeError was observed.",
+    "Add authenticated read-only runner health check; checks D1 and R2 without claiming a task."
+  ],
+  "verified": {
+    "typescript": "passed",
+    "backendTests": {
+      "passed": 21,
+      "failed": 0
+    },
+    "productionBrowser": {
+      "home": "rendered",
+      "session": {
+        "status": 200,
+        "signedIn": false,
+        "admin": false
+      },
+      "catalog": {
+        "status": 200,
+        "protocol": "arena-v3"
+      },
+      "experiments": {
+        "status": 200,
+        "count": 1,
+        "matches": 42
+      },
+      "opsAnonymous": 401,
+      "replay": {
+        "status": 200,
+        "frames": 1000,
+        "lastRound": 1000
+      },
+      "upgradePackage": {
+        "status": 200,
+        "bytes": 97787
+      }
+    },
+    "runnerTests": {
+      "passed": 12,
+      "failed": 0
+    }
+  },
+  "limits": [
+    "Direct Node HTTP requests from this Mac currently receive an upstream Cloudflare HTML 403, including the documented service-access header. Browser requests reach the deployed application.",
+    "Production independent-runner connectivity remains pending; no paid execution has been started."
+  ],
+  "sourceSha256": {
+    "app/api/[...path]/route.ts": "026f7aa446282006e265309670f2711a6966107d758ce842f4ee981a850a98a4",
+    "platform-runner/client.mjs": "8a0c14399f5207e32b9d131610ed8f3d5bcea9a52355c67569f483aa9a0a006e",
+    "platform-runner/cli.mjs": "98964164b69e6b8602c4ed23d72709a003e69020232cc5bfcae1d82788b08d06",
+    "tests/backend-review.test.mjs": "8f6fbffda7260dfde0d30c290e43717f079ca68917edcb304fb89a4ae572da26"
+  }
+}

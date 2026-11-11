@@ -1,0 +1,1141 @@
+{
+  "files": [
+    {
+      "path": "games/monecraft/PROVENANCE.json",
+      "size": 169,
+      "sha256": "f58ab3a4fc2508dcdd972502f309d0d57def26d641dbba4d221fc4dce2b2dec8"
+    },
+    {
+      "path": "games/monecraft/README.md",
+      "size": 537,
+      "sha256": "004715427635a4be7d6016fe55b3718bc6a4bdc49f455ceb42d0e422b6f63e68"
+    },
+    {
+      "path": "games/monecraft/backend/Makefile",
+      "size": 1127,
+      "sha256": "b2af3483120f8cd540f44090261fbd2d6c2c9c20d534b6489f407f0ab1ee5f0b"
+    },
+    {
+      "path": "games/monecraft/backend/Makefile.base",
+      "size": 812,
+      "sha256": "8a1b0c33a08c619945f4d32a68598f34cfc5dbb41e2f68570c27d70bc690cff2"
+    },
+    {
+      "path": "games/monecraft/backend/Makefile.base.linux",
+      "size": 648,
+      "sha256": "c50be41918bf25473ea8adea8230da0fa1177be73313856199488b43bbc3f6a9"
+    },
+    {
+      "path": "games/monecraft/backend/ailoader/.gitignore",
+      "size": 9,
+      "sha256": "f677b15d2c7ae6a66d8895447abd1d5a6fa4d5ac162f82b09d6b426bbbfec980"
+    },
+    {
+      "path": "games/monecraft/backend/ailoader/Makefile",
+      "size": 80,
+      "sha256": "0c3b3ef7d99af788f4727caa58fff266f7bf910e4f7c818175e095673ed02f48"
+    },
+    {
+      "path": "games/monecraft/backend/ailoader/src/include/GC_controller.h",
+      "size": 3155,
+      "sha256": "d13fb7491853a8e38d3d7dfc04cb8ca8fe7e50b2df0e05b9fff3c0de019a6609"
+    },
+    {
+      "path": "games/monecraft/backend/ailoader/src/main.cc",
+      "size": 815,
+      "sha256": "f71fca2ef68afdbf3d712c1251f20b1820029cb30464ead5db0521329f29a638"
+    },
+    {
+      "path": "games/monecraft/backend/libailoader/ailoader.cc",
+      "size": 10697,
+      "sha256": "81479499030b9f567dd826a1189a18d64b734038d08c040a10471efdd739223f"
+    },
+    {
+      "path": "games/monecraft/backend/libailoader/include/ailoader.hh",
+      "size": 2202,
+      "sha256": "ccb2c913515ee4368682d29b1e18a2598b3d74da0eb6284973b8e0b7e920a79a"
+    },
+    {
+      "path": "games/monecraft/backend/libailoader/include_private/config.hh",
+      "size": 298,
+      "sha256": "0b0bb56f69bf143f955f9298196fa92abdb93b3ca71b00ee96c4762e96c052a1"
+    },
+    {
+      "path": "games/monecraft/backend/libailoader/include_private/lib.hh",
+      "size": 727,
+      "sha256": "4bd9b1d3ec6bf9f31654e3705e96906cb40a953d8962228fb7259eaaa632b8dd"
+    },
+    {
+      "path": "games/monecraft/backend/libailoader/lib.cc",
+      "size": 4941,
+      "sha256": "171108ec54c588f2358dcbf7325a97a3d02347e700fb5d59992ca5e78505b628"
+    },
+    {
+      "path": "games/monecraft/backend/liblogic/.gitignore",
+      "size": 6,
+      "sha256": "197950f45fbc0f2c7b9db3253fb50d7a1c8eb39afdb74c4b13628b67b9f140e5"
+    },
+    {
+      "path": "games/monecraft/backend/liblogic/include/logic.hh",
+      "size": 1543,
+      "sha256": "5ce225cc972fa847d3fe0a08a7411e8e71d47edb1aa930d912a97e64f21dfc6b"
+    },
+    {
+      "path": "games/monecraft/backend/liblogic/logic.cc",
+      "size": 2288,
+      "sha256": "9a0baf733a74bf1be668af6fff600a71cf911f0bdd1799809f11fb8937a7fe53"
+    },
+    {
+      "path": "games/monecraft/backend/logic/.gitignore",
+      "size": 42,
+      "sha256": "48415d2a6b282fd08121519e911eb6844a7cc44384fb0a4a89dacaa51312dd22"
+    },
+    {
+      "path": "games/monecraft/backend/logic/Makefile",
+      "size": 74,
+      "sha256": "be75b8a7368e08326bd179b9ef39a31ffdc8e2ce3b1f31a5d44670abbd782f08"
+    },
+    {
+      "path": "games/monecraft/backend/logic/Makefile.win",
+      "size": 409,
+      "sha256": "de8f5fb47b01b1df1b748f30b65cf811147babc4f754a0561348b657bfa67506"
+    },
+    {
+      "path": "games/monecraft/backend/logic/contest_level_1.txt",
+      "size": 992,
+      "sha256": "eadfcfd21ee50a9dde98d683dc4603be92a858da995108ea6f63dab1c0232173"
+    },
+    {
+      "path": "games/monecraft/backend/logic/contest_level_2.txt",
+      "size": 993,
+      "sha256": "617114fa470aae99f85150eea0790d1ef9d452d2e77551814f4195e76db5aad8"
+    },
+    {
+      "path": "games/monecraft/backend/logic/contest_level_3.txt",
+      "size": 993,
+      "sha256": "8cf25d6d5609a422340353de2e88a1860c37dff78f515f8431219fada72a341d"
+    },
+    {
+      "path": "games/monecraft/backend/logic/contest_level_4.txt",
+      "size": 992,
+      "sha256": "75d048c44884d402fbae464262d2767df488970272bd45faa36923a99a5192a1"
+    },
+    {
+      "path": "games/monecraft/backend/logic/contest_level_5.txt",
+      "size": 992,
+      "sha256": "8b3da2016495192a27a71ab361b5a10dcdc6b0d10b83b4166b4e410a4bed54bf"
+    },
+    {
+      "path": "games/monecraft/backend/logic/map.txt",
+      "size": 992,
+      "sha256": "86d24f4ac1a1d0aecc7541dfb46607d5756707eb1c77118ed7387db5e3efac17"
+    },
+    {
+      "path": "games/monecraft/backend/logic/resources.res",
+      "size": 26,
+      "sha256": "baabb0f4eba2196ff673faa39954628de6abe4cad4eff446c8ac783ede37a842"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/MapGenBase.cc",
+      "size": 410,
+      "sha256": "559f0e1eca6e4585e149946d58c56ad73d54b0873986aaae3b624993a6a3cd94"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/MapGenX.2.cc",
+      "size": 1329,
+      "sha256": "1af00d2bc9f3e7b3fedbbc6d64c35b4698e294e6d937e0b034980bfb165f440c"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/MapGenX.4.cc",
+      "size": 1923,
+      "sha256": "16cebda8175c01c9cfd5d2c62b8d48f7a9e3b82a860e4b827b53956ade3ac966"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/MapGenX.5.cc",
+      "size": 2614,
+      "sha256": "5dd5e87f9e94ea49d1bb0ab2a649cba79f629f0fb9542a0d97abdbe74d82ce23"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/MapGenX.cc",
+      "size": 4986,
+      "sha256": "f8ed5758953298cca178653e6a8638007227cb6e470f7876681b97ec01a2eec0"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/achieve.cc",
+      "size": 455,
+      "sha256": "d7ff729b833e0521936e29e5c8b331b71bde5d6daff5a06c5ec46962cde4160f"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/MapGenBase.h",
+      "size": 481,
+      "sha256": "152d5ead1f1e88ac741869e316a24e295209c64be6bf649a33b3875d2f9d3253"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/MapGenX.2.h",
+      "size": 341,
+      "sha256": "1cda5aa26907086b004987042955428265817ea0be21f2d280027c194ec30179"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/MapGenX.4.h",
+      "size": 719,
+      "sha256": "a29178f108fdd98a2dffdcd94d19ed04eb4c807c799b477d1301457c8c2cff54"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/MapGenX.5.h",
+      "size": 738,
+      "sha256": "e31aa9b74a1755fb3795c804368e7266399d0fc36b0de830dcc6a769986d3c01"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/MapGenX.h",
+      "size": 464,
+      "sha256": "b0fb2e8cc56ad874cd148de5cd6bf0c45ee5aa3b51dd22d3bbad574fc4a1ad08"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/achieve.h",
+      "size": 814,
+      "sha256": "ca536f08f227c4bfe7cad795ec40b22c15b968465ebc6f7eec8d3d8fc0ec877a"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/gc_logic.h",
+      "size": 710,
+      "sha256": "dd5be396600279945882364f123ae210fbb98fa1e5f9a9b76f4a3964efc7fb8e"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/autolink.h",
+      "size": 438,
+      "sha256": "6094efd01ecb0ed0c776c41c57b482a5a2665fb5990d452e9ab9e77a2531e0a8"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/config.h",
+      "size": 1536,
+      "sha256": "ea27bcb8282e6e3e92617d02b4b833de88a9679b9dd741e2d166a0b9d9326221"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/features.h",
+      "size": 1290,
+      "sha256": "619e12a6d9671efacc47995255d1cd29861c879a80ac56fddaf9eab1ef28b7da"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/forwards.h",
+      "size": 735,
+      "sha256": "1e8203651f400e3173a7cf3a1d2f504ae7d31aa590de279f14bf36b291808243"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/json.h",
+      "size": 200,
+      "sha256": "93da2930fb6e994f48e871dc8114c4c22731ccfc291d533050622c0d198d4c62"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/json_batchallocator.h",
+      "size": 3929,
+      "sha256": "0b64b404862480c6c5687bf525c6eab5ad3e1a1b6d8d3c91d9aff690ebfe1e9d"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/reader.h",
+      "size": 6486,
+      "sha256": "4f4e7ebd63a95d78aed9ac9d4ff8f3a5ffe5904c49d42e229d76a34b2c8d3da9"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/value.h",
+      "size": 33960,
+      "sha256": "a95a47b35004c3fac3e89f50fba51c2d9b17cc927e5000fdd0f2de6de97c0c1d"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/json/writer.h",
+      "size": 6188,
+      "sha256": "5dd8a88630d278e2818e8563925ee81f276b317755ea5d4915d2c1a8e44d459d"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/output.h",
+      "size": 477,
+      "sha256": "6b52768efa1340e54881494d1f6a16cd3416264f4a4a5ad84cf93c8ea437c320"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/include/sdk.h",
+      "size": 4210,
+      "sha256": "c878921c8a81c5faffbb4c0800526d16ffb8baa0ab7b1ec22a900d46beea6432"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/lib_json/json_batchallocator.h",
+      "size": 3929,
+      "sha256": "0b64b404862480c6c5687bf525c6eab5ad3e1a1b6d8d3c91d9aff690ebfe1e9d"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/lib_json/json_internalarray.inl",
+      "size": 12669,
+      "sha256": "1485f419dfb5a1dac1660ce6bfa7eaf86151e729e0c5c7222a993b7a7ee410a1"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/lib_json/json_internalmap.inl",
+      "size": 16292,
+      "sha256": "b22ffa1d13f98c2478d4c0c80d7d58fb57c619c7c1c420d846453b593ee0e73c"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/lib_json/json_reader.cc",
+      "size": 20951,
+      "sha256": "359c73bd11c9d3acf1805ec64010847803207eb3bfa531490ef3518ac7a78843"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/lib_json/json_value.cc",
+      "size": 39045,
+      "sha256": "967f5a42afdb59f778a22587d300818b491af3b1ca33d1db993fd022523a20cf"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/lib_json/json_valueiterator.inl",
+      "size": 7367,
+      "sha256": "3de2050b9aa170dfb0ee9caa37e482193bdc6ac140ed21262eba410bbb5d45dc"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/lib_json/json_writer.cc",
+      "size": 20314,
+      "sha256": "14944242a80ae2c648c1e18207e85ea3143f9ea9f6229884cd4e1ef7eb3e05f2"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/lib_json/sconscript",
+      "size": 146,
+      "sha256": "0416da49e053990e4df794c19631623af616c17d59ca3710f209a67a2a132408"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/logic.cc",
+      "size": 21934,
+      "sha256": "4bfe6933def965a948705eb8513059f8bcea763a20a22c0d48faee3f5f247a1e"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/map.txt",
+      "size": 930,
+      "sha256": "6f3bd029637110b1e9e75b1610f8d781deee788b9a734b258f21576481b82443"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/output.cc",
+      "size": 1811,
+      "sha256": "8d1f26e736c2ab6dea902a4ab62d2011ba317d253b17d1108dc43cf8b1eb5b32"
+    },
+    {
+      "path": "games/monecraft/backend/logic/src/sdk.cc",
+      "size": 705,
+      "sha256": "aceba7341c2c8056d7e100cc5b686ac4893c71f6cacc3db83db61b1a79aeefea"
+    },
+    {
+      "path": "games/monecraft/backend/map.txt",
+      "size": 930,
+      "sha256": "6f3bd029637110b1e9e75b1610f8d781deee788b9a734b258f21576481b82443"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/ai9.cc",
+      "size": 2403,
+      "sha256": "8c4ca4c79029f25504f2c7519509fcf0edccb2dfac2d27c1daad840a91515701"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/include/ai9.hh",
+      "size": 1750,
+      "sha256": "276b565f720caf3244e5e9e6b20f028ad9c907d3a1ced363ba85d8a8846a629f"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/include/config.hh",
+      "size": 300,
+      "sha256": "7131f5fa66e4223ffb70807c426a15591ede4dafd3afc16666da5c2399e1c488"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/include/msg.hh",
+      "size": 1230,
+      "sha256": "9b142daec60b8615473ea6083a274aadd31dabc93a462433a3e02ecda5285206"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/include/shared_ptr.hh",
+      "size": 1351,
+      "sha256": "5d3daa151674681dcf99b30fee061a48d2c839fa16764d1917d9fdc14f4a1db1"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/include/socket.hh",
+      "size": 288,
+      "sha256": "9b8a96055071a70a5caa745022692e92fc984090fc150e6e6d000cd17e1bba83"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/include/socket_base.hh",
+      "size": 1110,
+      "sha256": "25f43101fb6033fc69077d279f232dab899f2df96a4472f8ddcbb34e42d6365b"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/include/socket_stream.hh",
+      "size": 2094,
+      "sha256": "8f3bec04cf642a0811e4ecdcb110be8b48e98830c277f05a650a215cf8212c14"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/msg.cc",
+      "size": 1384,
+      "sha256": "c32f8e4f4ea951dcce9f3373784cb1256e69412640454eec40fc8e97a55f81da"
+    },
+    {
+      "path": "games/monecraft/backend/platform_shared/socket.cc",
+      "size": 5438,
+      "sha256": "04092e70fcb26e2d260242278c94fb89dc165925b33622578e57c1d764a1ca4e"
+    },
+    {
+      "path": "games/monecraft/backend/resources.res",
+      "size": 17,
+      "sha256": "8a423212960cf991b7537bf95cd486c311ddd87000d8588b326f5a27c5024e4f"
+    },
+    {
+      "path": "games/monecraft/backend/shared/gc_socket.cc",
+      "size": 2241,
+      "sha256": "f5fa01870232ae38a3e2129ca6737c31ac40b6a512622f60f8ca7df1c4a31c86"
+    },
+    {
+      "path": "games/monecraft/backend/shared/gc_socket.h",
+      "size": 1113,
+      "sha256": "198dcef8786fc7e8f15cc352d882f0a1bf8a929a294dee875b5266b742cf25ce"
+    },
+    {
+      "path": "games/monecraft/evaluator/__init__.py",
+      "size": 3251,
+      "sha256": "3eda39a3529df9b246127a25323644ada1fc084d1bf74e18dd7b20aab1178b4f"
+    },
+    {
+      "path": "games/monecraft/evaluator/narrate.py",
+      "size": 3462,
+      "sha256": "dce7445d69443a86eb32b039c1a66b0a46d7f983739dfa5fda2ae9de113b1c7a"
+    },
+    {
+      "path": "games/monecraft/game.yaml",
+      "size": 479,
+      "sha256": "6ba8eea7ab4ce9c2bed361a685d9526a183a2b111e697eb8d15134080522969c"
+    },
+    {
+      "path": "games/monecraft/players/manifest.tsv",
+      "size": 2983,
+      "sha256": "95580fd90fe27e43af85fe1f55493abaaf3a370cbde9a891989beb400046a6ee"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p565__ai3936/ai.cpp",
+      "size": 2648,
+      "sha256": "376893c4be951a1a6754489ee60b6d93a88d76ae2fb10f87867705d2172194bf"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p565__ai3936/provenance.json",
+      "size": 364,
+      "sha256": "4dd5559f3a122811d693f2b99c36dd585e226896c667eb96e09401027627432c"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p569__ai4887/ai.cpp",
+      "size": 1972,
+      "sha256": "6acd6493376679da34d5f41dcce26e73ace8642f5e86e68533fbe4d1491c0bc5"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p569__ai4887/provenance.json",
+      "size": 366,
+      "sha256": "89ed2f93bde511f8769caafb9381afe4c9eab46dc74edea848ebcd1212f1467a"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p570__ai6829/ai.cpp",
+      "size": 14477,
+      "sha256": "59b862ede8e6e45a1243647d14ee8e44893e48490e8830acf561379a75993438"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p570__ai6829/provenance.json",
+      "size": 364,
+      "sha256": "1746b57f27c70ddf23c8a0c4f08b8f1f31a1b26e798c318905611f193bb65bbb"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p571__ai6881/ai.cpp",
+      "size": 21250,
+      "sha256": "c9d72b9e1b5a3c5774b8c84ee66740448c3614f2524564ab1511461b7055dd3d"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p571__ai6881/provenance.json",
+      "size": 364,
+      "sha256": "71db9fe4d36c102387ff42669df285b616f9eba31f85c0a5378a019c10bdb7e7"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p572__ai6156/ai.cpp",
+      "size": 2620,
+      "sha256": "ce93b1d014a200099612d8136c1e76996e3512055c8d17b9e1359396c5ffc99e"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p572__ai6156/provenance.json",
+      "size": 362,
+      "sha256": "bb6b7c929d0c7f95f363b8239daa0a7ab7d45fcb0a5fe57722a95f11638b4508"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p579__ai4292/ai.cpp",
+      "size": 11284,
+      "sha256": "a6c450ee379df11850ec1bebd70844f9a3c86aafb5ef69034689d2cd14ac87d0"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p579__ai4292/provenance.json",
+      "size": 362,
+      "sha256": "0aa302e7e82172f05389b89a3379cc288fcb55cc9f775606b4f198f2aa8a9114"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p587__ai5070/ai.cpp",
+      "size": 1033,
+      "sha256": "448a2511eca7a4f85b8393dcbf47d6f71b495b2531705a2c51fcaba4023197d1"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p587__ai5070/provenance.json",
+      "size": 366,
+      "sha256": "9e5ced5d408b0936d12e1719e2ee3444b41f96d997c7a6aa498b15ead168bda5"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p589__ai5006/ai.cpp",
+      "size": 4662,
+      "sha256": "fb085af41659bd5b0c48f910c905fde4441e58e99dfc3d52569d01e6176f9003"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p589__ai5006/provenance.json",
+      "size": 363,
+      "sha256": "ccb927abf8982b68d9b46172eb1446b1c52ed9b92c869f169db51cc0d39c7956"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p603__ai3993/ai.cpp",
+      "size": 1438,
+      "sha256": "5dd8737ab9681d912f9b36474cb50f281451a6b33c1e358c1e19e164a89f8a40"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p603__ai3993/provenance.json",
+      "size": 365,
+      "sha256": "ca3ac81a69fbaf59643c3f83aefa2eff65a7a688a56f13dadd6d2144d51e4fef"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p604__ai5468/ai.cpp",
+      "size": 1575,
+      "sha256": "16ae0bf810e5cdea6827f102fe935886aee52747b506b1594d0ffafb63f9459b"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p604__ai5468/provenance.json",
+      "size": 365,
+      "sha256": "4126a12d440151ede9a1b7cbcb937068bdb5ba8620c397566adc9a930bebd151"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p605__ai4096/ai.cpp",
+      "size": 1042,
+      "sha256": "27587bf0e3af57f566bc9d91d73c86611787f8388b56211e31f88b6c89f5d1e6"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p605__ai4096/provenance.json",
+      "size": 366,
+      "sha256": "b8228e4f52d04f982891c017fd117f6c1874bfe7b336232ee84a2f27767ec16d"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p607__ai3951/ai.cpp",
+      "size": 910,
+      "sha256": "853159f1d59f9466d6ba5f8aaa68a0d3db7591b9302cc35b24aaedf7d1e82f52"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p607__ai3951/provenance.json",
+      "size": 366,
+      "sha256": "a249e7a9872a7082d1e4617463ae27e36b4f0685ccfbf36a1d90dcf6d27e3fe3"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p611__ai3978/ai.cpp",
+      "size": 1028,
+      "sha256": "67f4eb4858ca1f342e54b4d18426509cc5fe8e6efac0df482f171950aac00fee"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p611__ai3978/provenance.json",
+      "size": 366,
+      "sha256": "04c52c6ae69139c56f6c496d1d75f1d56a5af6a941e624783c1cce3a6983c754"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p613__ai3975/ai.cpp",
+      "size": 910,
+      "sha256": "853159f1d59f9466d6ba5f8aaa68a0d3db7591b9302cc35b24aaedf7d1e82f52"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p613__ai3975/provenance.json",
+      "size": 366,
+      "sha256": "861924dff8d02970ba3de56a64219cc0d107bb179dc6b534eb79d561b1a9acc9"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p618__ai6465/ai.cpp",
+      "size": 6166,
+      "sha256": "c0533fa7a7d03d9fa228e04b9ae24450d54e0cfe01bd9c57c1d8e49da2623db7"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p618__ai6465/provenance.json",
+      "size": 366,
+      "sha256": "b3b4dcc794f1b03588724f73c0305933505d4ecccaa4ecfb6b61315eab409417"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p624__ai5042/ai.cpp",
+      "size": 11478,
+      "sha256": "10e221403a9b1ac20f7fa6c19363baa720b323299e8b08d5fbef252d8505c87f"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p624__ai5042/provenance.json",
+      "size": 364,
+      "sha256": "fcd563229f539b939bc3c3c57336970373244506693d3033f483e8230ddb5224"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p625__ai5314/ai.cpp",
+      "size": 2654,
+      "sha256": "5a9c2e9a4992585c25ef1a8b1a97579933d9d8dc10671278a761072916c13706"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p625__ai5314/provenance.json",
+      "size": 366,
+      "sha256": "4840a9e28f021002e4ac3bb908c04470c123dff668d248ca0e0039a06bc928a9"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p627__ai4838/ai.cpp",
+      "size": 191,
+      "sha256": "abc560c683d450c6d2c6299f04edd50c727949c4fc7ff457bbe6b3f7c8011914"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p627__ai4838/provenance.json",
+      "size": 366,
+      "sha256": "a02ff82bbf7c7c5a5442e4ccaeb9eb854bcb44785be971a2836748337165849b"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p628__ai4218/ai.cpp",
+      "size": 2941,
+      "sha256": "3d1a5e5ae026cdad9d0cb45743139e4f13b624a0cb978af08122d35f67e54e59"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p628__ai4218/provenance.json",
+      "size": 366,
+      "sha256": "8fa2fa4c6530b0c0d46b6116ad3fc06b93133e8cdd802c940463ec19292d4db4"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p632__ai4261/ai.cpp",
+      "size": 910,
+      "sha256": "853159f1d59f9466d6ba5f8aaa68a0d3db7591b9302cc35b24aaedf7d1e82f52"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p632__ai4261/provenance.json",
+      "size": 363,
+      "sha256": "e0f0bf6304303e62157883f70859f269b87e3d059ee86444b5d49cd7a7d66110"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p635__ai5509/ai.cpp",
+      "size": 3229,
+      "sha256": "fb1fb6ad994c09b93b351f0da74ebdc1f7442ce7e0f621c74091807603e64fe9"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p635__ai5509/provenance.json",
+      "size": 366,
+      "sha256": "0d069cb071ceedd12e6127937ae2d6741848f5b0d2e0dbaf5d970dcddd00f25c"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p636__ai5002/ai.cpp",
+      "size": 1335,
+      "sha256": "e4f8412c346ce3e5146ad3f361f1ef3776a789c9074302ba6f9c032103e972a4"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p636__ai5002/provenance.json",
+      "size": 366,
+      "sha256": "a1bf53553e660d845f6a80d76f145b1166b22b44a2e2208a03028c36586efa94"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p638__ai4277/ai.cpp",
+      "size": 930,
+      "sha256": "3176b3be1794f8ea78c9f26fea1539df84ffc64ba9542c3ba20216797e336969"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p638__ai4277/provenance.json",
+      "size": 365,
+      "sha256": "2149b34131e7addae4fcd7dbfd3b0c79b1246ed0ca5208340451e29ddbc882f9"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p643__ai6928/ai.cpp",
+      "size": 21163,
+      "sha256": "9b658f862d51a5831b4c45cbea47d3208444a0424a5fa706d68d123c92a07680"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p643__ai6928/provenance.json",
+      "size": 364,
+      "sha256": "94d8f38a802f02753d240823bcb072cbd7c8620b24613ff34db8c348026a394c"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p645__ai4814/ai.cpp",
+      "size": 2531,
+      "sha256": "32a2e708e5089def97c79aee8b919015f8258143d2869e97f672302b68e72298"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p645__ai4814/provenance.json",
+      "size": 366,
+      "sha256": "8adc47bc2c74f59752de7849014cee95bedcb67580c1db33569d0a664c9d6e05"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p646__ai4324/ai.cpp",
+      "size": 910,
+      "sha256": "853159f1d59f9466d6ba5f8aaa68a0d3db7591b9302cc35b24aaedf7d1e82f52"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p646__ai4324/provenance.json",
+      "size": 365,
+      "sha256": "1e27a95b7800683758b8c289a494451470df51f9e0207306299a5c6161c7a191"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p647__ai4686/ai.cpp",
+      "size": 7014,
+      "sha256": "e19fb9d853e5f3cfa63a93b1fabdcf7d74f503616f1e477be3451bd74a6f8d7a"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p647__ai4686/provenance.json",
+      "size": 366,
+      "sha256": "f6fe3e63c6acc99720f77976432cdc50c6bd5375aebb0538715ae0d1956eb4f4"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p651__ai6155/ai.cpp",
+      "size": 2243,
+      "sha256": "939914f6445756060eb065f8ab37d11c7712829755d193ecb2acedbf61418611"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p651__ai6155/provenance.json",
+      "size": 363,
+      "sha256": "1c278adf5fe799ee718a34adde6b34016f401970bae804b1880e9ec2d71f624c"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p653__ai5731/ai.cpp",
+      "size": 7463,
+      "sha256": "be43f4dbe3e5fe09aedce63642135abce49055bcaca6ee526c154ff5b05891d9"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p653__ai5731/provenance.json",
+      "size": 363,
+      "sha256": "a5267735d9a7ab9870e3c236e1661163563d903172ca2030f734d5205ed6239c"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p659__ai5445/ai.cpp",
+      "size": 8215,
+      "sha256": "9de16a59f82a072d5dede2b307f5c134c2cb94db65d99044e652ec55a2691473"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p659__ai5445/provenance.json",
+      "size": 365,
+      "sha256": "960652e0901b63f45515d92de782b63d2ba659f4ba4a1aea5256f64986539e96"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p665__ai6824/ai.cpp",
+      "size": 6450,
+      "sha256": "436aa5ab43f8ce1fc2182e93c6c2a797dd6878bdbcc7f902b501dd1d2316a265"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p665__ai6824/provenance.json",
+      "size": 363,
+      "sha256": "d17aeaa0a8acaaafff05b9d505beef8d3126bcd10a38b055fc91603b6176ca5f"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p668__ai4656/ai.cpp",
+      "size": 1125,
+      "sha256": "69c437f53626cf858ec5c3228abe2c412c28a59e3cd5024f3f596ff6e089a887"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p668__ai4656/provenance.json",
+      "size": 366,
+      "sha256": "670637e5d5be64a8b8c0198062848700eddf51c1f891e449801710a0719e6cea"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p669__ai6011/ai.cpp",
+      "size": 785,
+      "sha256": "dee27d1c4dfc1495fcda0fb551251626dc059bb4ad05cccfa88456177adc3c64"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p669__ai6011/provenance.json",
+      "size": 366,
+      "sha256": "f6ac56259d37aad0a0863061256d1f85c1465a872a796f9993c69da6b0296c96"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p670__ai5619/ai.cpp",
+      "size": 170,
+      "sha256": "2cdd0566784a691a7cccfdf67378ec2cdb1cf73710d1e2862366863c1d6727fe"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p670__ai5619/provenance.json",
+      "size": 366,
+      "sha256": "12fea4d5738c29a5d171d34b63b69fdf9a01bad453df5151396e085800f2065d"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p671__ai4692/ai.cpp",
+      "size": 1133,
+      "sha256": "76cfa20f4c18af021b32b12e691af88ca50486429d29fc39b7de3495b63af240"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p671__ai4692/provenance.json",
+      "size": 366,
+      "sha256": "21edeb48048e9375ee91199d3aa104f87d9320bafbcb6429eee6eb1baf24cd1f"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p673__ai5165/ai.cpp",
+      "size": 2633,
+      "sha256": "b19cbca917718ecd56172ea6c46366e707d5bf139419872435f67321e4db5016"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p673__ai5165/provenance.json",
+      "size": 365,
+      "sha256": "03d4f6ebbd70a4c32d2103f14ba3f28f5425487e3fde1ea2936d6ca53c8536ae"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p677__ai5293/ai.cpp",
+      "size": 1475,
+      "sha256": "43ba3e1bf2066e23c1409cc301b5e1786a44264c7eb3cf5df41a2807e04c61d3"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p677__ai5293/provenance.json",
+      "size": 366,
+      "sha256": "85fd5d3c8cef4fc70a92e66fed082e6c96d34cd8882e36c23add9b41605222cc"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p678__ai6669/ai.cpp",
+      "size": 1972,
+      "sha256": "6acd6493376679da34d5f41dcce26e73ace8642f5e86e68533fbe4d1491c0bc5"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p678__ai6669/provenance.json",
+      "size": 366,
+      "sha256": "43689f3892e1d5422f2b311a5df4f28fd1f7658ae53e0a6ab8e55ec04aed7bcc"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p684__ai6213/ai.cpp",
+      "size": 4345,
+      "sha256": "0d7f17a4ae1e1fe912447f84bf58e91026c5bbd136dfbac7a7674ce11dba5887"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p684__ai6213/provenance.json",
+      "size": 366,
+      "sha256": "224beac40ae743f62d1690a1d484f07b82efe3ce6c5129bffc8386e5e54f34b8"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p687__ai5218/ai.cpp",
+      "size": 1585,
+      "sha256": "d3765ef9fe8ae8176f9a3957c2f54c25d8b56435867c3ecab4241eb970bfdf7a"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p687__ai5218/provenance.json",
+      "size": 366,
+      "sha256": "04e43f9a16b4e112ae1e25ce5b91d5446dd954f82ef0bf0aebc5158721201db9"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p689__ai5625/ai.cpp",
+      "size": 3849,
+      "sha256": "88ee343d0248887482aa0a82c167c4c045e32d2c5b6a72f364e4ceebfc20b102"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p689__ai5625/provenance.json",
+      "size": 366,
+      "sha256": "7aa5b79642cfc8c258a043cccc602883d5cff8a980cd2ad33d0b52c4ae669d20"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p693__ai6400/ai.cpp",
+      "size": 1028,
+      "sha256": "3d0541e4d9bae3defcec4b339ae50a243a9a14eb587c63691ab1d81e37fbef86"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p693__ai6400/provenance.json",
+      "size": 366,
+      "sha256": "8b36f326afe7871a23f4b9c096a28e736f2377c740dbda545ed6091a44704f0d"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p699__ai5743/ai.cpp",
+      "size": 910,
+      "sha256": "853159f1d59f9466d6ba5f8aaa68a0d3db7591b9302cc35b24aaedf7d1e82f52"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p699__ai5743/provenance.json",
+      "size": 362,
+      "sha256": "070a31ec4796722a73d7d31a0d6c5af4ebc74214914954aa3137f31d0ea71f31"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p703__ai6390/ai.cpp",
+      "size": 2062,
+      "sha256": "510f2b1c6f9432eb9d979fd92a0f9e7e6e2127dd4f9dd830581e07239e859cbc"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p703__ai6390/provenance.json",
+      "size": 366,
+      "sha256": "b618a7bc4100de3dba9e16c10e133e065cee90bdd6ea5e35d9121d08a9b27f8e"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p708__ai5580/ai.cpp",
+      "size": 1307,
+      "sha256": "79ac06296cfbaf613b8abeac4b7ef21b4ebda56bf67fd90a38d27901630867b9"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p708__ai5580/provenance.json",
+      "size": 363,
+      "sha256": "e34da9f28ac50763660025b6ed1e21280a77730be6c8548bea60f77a6b1f10ce"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p711__ai5655/ai.cpp",
+      "size": 1267,
+      "sha256": "584297405b72fbf4a2c117663c6d5105417e274a68d7c5be8d6c6a21c0d70fba"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p711__ai5655/provenance.json",
+      "size": 366,
+      "sha256": "bfb3eb7caf19ccf0ab2b9ff39d49055eb6415fb241c32c5c59f86a625c1ae7d4"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p720__ai6477/ai.cpp",
+      "size": 5652,
+      "sha256": "8a0d0dd9723a9b1f48bb2e6a3af8fdbf0ca46091887379206c46f38cb25edcf7"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p720__ai6477/provenance.json",
+      "size": 363,
+      "sha256": "1580e8c03fac49703c7bb5ffa434c7c0bd4b8e517d4377790b5eed97635dfb9c"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p729__ai6467/ai.cpp",
+      "size": 6166,
+      "sha256": "c0533fa7a7d03d9fa228e04b9ae24450d54e0cfe01bd9c57c1d8e49da2623db7"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p729__ai6467/provenance.json",
+      "size": 366,
+      "sha256": "d8bb1f5f0d7642540c4c039bf3b7924c9801291f85770fc5ca9223d279ea102c"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p732__ai6686/ai.cpp",
+      "size": 1474,
+      "sha256": "2ed8891b9c86d04e6996fb7cbe13659a0852f33045e542dfcdf9e317c049627a"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p732__ai6686/provenance.json",
+      "size": 366,
+      "sha256": "402bd5626df86fb67438e2cd7b1594cde6604c1314863254437b807b8d1999d6"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p733__ai6801/ai.cpp",
+      "size": 1509,
+      "sha256": "64b01e286056fb0a00b247c89e5b6b12eb19712d2f32641c3496fcd4e8b4ca7e"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p733__ai6801/provenance.json",
+      "size": 366,
+      "sha256": "f5c24bb3e71e2db39771e1542459640607576b4c478135e4af5f354bb306e4f4"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p734__ai6808/ai.cpp",
+      "size": 910,
+      "sha256": "853159f1d59f9466d6ba5f8aaa68a0d3db7591b9302cc35b24aaedf7d1e82f52"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p734__ai6808/provenance.json",
+      "size": 366,
+      "sha256": "198efce44c7228067e685622177c948f9d72de8c5d22267c440c3e9f92b6b7c2"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p739__ai6961/ai.cpp",
+      "size": 910,
+      "sha256": "853159f1d59f9466d6ba5f8aaa68a0d3db7591b9302cc35b24aaedf7d1e82f52"
+    },
+    {
+      "path": "games/monecraft/players/pool/monecraft__p739__ai6961/provenance.json",
+      "size": 366,
+      "sha256": "66b58ea967acc5b81318e8b98a66713824ea6cb7cf3f4ee36a55e39dbc5975ad"
+    },
+    {
+      "path": "games/monecraft/players/publication.json",
+      "size": 4167,
+      "sha256": "6569ceae3734f91063455971bef463152478f2e9ade3401ad5630894312b8930"
+    },
+    {
+      "path": "games/monecraft/plugin.py",
+      "size": 708,
+      "sha256": "e1aef9addcd8cf315caf06ff1789ce3c6d1377a4f1a628af3ee52579b03e34e4"
+    },
+    {
+      "path": "games/monecraft/public_sdk/INTERFACE.md",
+      "size": 348,
+      "sha256": "d9b3f60a1f70f0a1b1e2597742c5ff343e2d24f4ad93b0fdb5e3fea267a2b8fc"
+    },
+    {
+      "path": "games/monecraft/public_sdk/Makefile",
+      "size": 241,
+      "sha256": "20c491afc32a8115c01d480b5a44cb1d0523fc35c258c43fbf22d316d5e596ec"
+    },
+    {
+      "path": "games/monecraft/public_sdk/README.md",
+      "size": 437,
+      "sha256": "f2ad94ec8bd95bb68d04f0c98ee8a46a3958c4534d992e5ca6f0d0bbab1e244f"
+    },
+    {
+      "path": "games/monecraft/public_sdk/ai.cpp",
+      "size": 12583,
+      "sha256": "228b4097e69655a642446584ac89d21fb952cc87ab1c99bc6f8eb792bbb2a77c"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/MapGenBase.h",
+      "size": 449,
+      "sha256": "fcda7baa58241c947b5ecaf86ed3d30ac54db514834689fe6ce7edde506ae376"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/MapGenX.2.h",
+      "size": 341,
+      "sha256": "1cda5aa26907086b004987042955428265817ea0be21f2d280027c194ec30179"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/MapGenX.4.h",
+      "size": 719,
+      "sha256": "a29178f108fdd98a2dffdcd94d19ed04eb4c807c799b477d1301457c8c2cff54"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/MapGenX.5.h",
+      "size": 738,
+      "sha256": "e31aa9b74a1755fb3795c804368e7266399d0fc36b0de830dcc6a769986d3c01"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/MapGenX.h",
+      "size": 464,
+      "sha256": "b0fb2e8cc56ad874cd148de5cd6bf0c45ee5aa3b51dd22d3bbad574fc4a1ad08"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/achieve.h",
+      "size": 814,
+      "sha256": "ca536f08f227c4bfe7cad795ec40b22c15b968465ebc6f7eec8d3d8fc0ec877a"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/ai9.hh",
+      "size": 1750,
+      "sha256": "276b565f720caf3244e5e9e6b20f028ad9c907d3a1ced363ba85d8a8846a629f"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/config.hh",
+      "size": 300,
+      "sha256": "7131f5fa66e4223ffb70807c426a15591ede4dafd3afc16666da5c2399e1c488"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/gc_logic.h",
+      "size": 710,
+      "sha256": "dd5be396600279945882364f123ae210fbb98fa1e5f9a9b76f4a3964efc7fb8e"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/autolink.h",
+      "size": 438,
+      "sha256": "6094efd01ecb0ed0c776c41c57b482a5a2665fb5990d452e9ab9e77a2531e0a8"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/config.h",
+      "size": 1536,
+      "sha256": "ea27bcb8282e6e3e92617d02b4b833de88a9679b9dd741e2d166a0b9d9326221"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/features.h",
+      "size": 1290,
+      "sha256": "619e12a6d9671efacc47995255d1cd29861c879a80ac56fddaf9eab1ef28b7da"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/forwards.h",
+      "size": 735,
+      "sha256": "1e8203651f400e3173a7cf3a1d2f504ae7d31aa590de279f14bf36b291808243"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/json.h",
+      "size": 200,
+      "sha256": "93da2930fb6e994f48e871dc8114c4c22731ccfc291d533050622c0d198d4c62"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/json_batchallocator.h",
+      "size": 3929,
+      "sha256": "0b64b404862480c6c5687bf525c6eab5ad3e1a1b6d8d3c91d9aff690ebfe1e9d"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/reader.h",
+      "size": 6486,
+      "sha256": "4f4e7ebd63a95d78aed9ac9d4ff8f3a5ffe5904c49d42e229d76a34b2c8d3da9"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/value.h",
+      "size": 33960,
+      "sha256": "a95a47b35004c3fac3e89f50fba51c2d9b17cc927e5000fdd0f2de6de97c0c1d"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/json/writer.h",
+      "size": 6188,
+      "sha256": "5dd8a88630d278e2818e8563925ee81f276b317755ea5d4915d2c1a8e44d459d"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/msg.hh",
+      "size": 1230,
+      "sha256": "9b142daec60b8615473ea6083a274aadd31dabc93a462433a3e02ecda5285206"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/output.h",
+      "size": 477,
+      "sha256": "6b52768efa1340e54881494d1f6a16cd3416264f4a4a5ad84cf93c8ea437c320"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/sdk.h",
+      "size": 4210,
+      "sha256": "c878921c8a81c5faffbb4c0800526d16ffb8baa0ab7b1ec22a900d46beea6432"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/shared_ptr.hh",
+      "size": 1351,
+      "sha256": "5d3daa151674681dcf99b30fee061a48d2c839fa16764d1917d9fdc14f4a1db1"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/socket.hh",
+      "size": 288,
+      "sha256": "9b8a96055071a70a5caa745022692e92fc984090fc150e6e6d000cd17e1bba83"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/socket_base.hh",
+      "size": 1110,
+      "sha256": "25f43101fb6033fc69077d279f232dab899f2df96a4472f8ddcbb34e42d6365b"
+    },
+    {
+      "path": "games/monecraft/public_sdk/include/socket_stream.hh",
+      "size": 2094,
+      "sha256": "8f3bec04cf642a0811e4ecdcb110be8b48e98830c277f05a650a215cf8212c14"
+    },
+    {
+      "path": "games/monecraft/public_sdk/main.cpp",
+      "size": 25,
+      "sha256": "deac66ccb79f6d31c0fa7d358de48e083c15c02ff50ec1ebd4b64314b9e6e196"
+    },
+    {
+      "path": "games/monecraft/public_sdk/runtime-src/ai9.cc",
+      "size": 2403,
+      "sha256": "8c4ca4c79029f25504f2c7519509fcf0edccb2dfac2d27c1daad840a91515701"
+    },
+    {
+      "path": "games/monecraft/public_sdk/runtime-src/json_reader.cc",
+      "size": 20951,
+      "sha256": "359c73bd11c9d3acf1805ec64010847803207eb3bfa531490ef3518ac7a78843"
+    },
+    {
+      "path": "games/monecraft/public_sdk/runtime-src/json_value.cc",
+      "size": 39045,
+      "sha256": "967f5a42afdb59f778a22587d300818b491af3b1ca33d1db993fd022523a20cf"
+    },
+    {
+      "path": "games/monecraft/public_sdk/runtime-src/json_writer.cc",
+      "size": 20314,
+      "sha256": "14944242a80ae2c648c1e18207e85ea3143f9ea9f6229884cd4e1ef7eb3e05f2"
+    },
+    {
+      "path": "games/monecraft/public_sdk/runtime-src/msg.cc",
+      "size": 1384,
+      "sha256": "c32f8e4f4ea951dcce9f3373784cb1256e69412640454eec40fc8e97a55f81da"
+    },
+    {
+      "path": "games/monecraft/public_sdk/runtime-src/socket.cc",
+      "size": 4965,
+      "sha256": "352648fbfc9b387cab80372dafe756feee4d1c01a1eb542f85948387c9f7938b"
+    },
+    {
+      "path": "games/monecraft/public_sdk/sdk-src/sdk.h",
+      "size": 4210,
+      "sha256": "c878921c8a81c5faffbb4c0800526d16ffb8baa0ab7b1ec22a900d46beea6432"
+    },
+    {
+      "path": "games/monecraft/replay_format.md",
+      "size": 972,
+      "sha256": "9411f911af7934ed6981ac905b93acde9e11b048031865cad8a1b60ed1c918c0"
+    },
+    {
+      "path": "games/monecraft/replay_skill.md",
+      "size": 938,
+      "sha256": "faf72f4ff1d9dd8a43f71facb5b1cfc9351528d06082c926947fbed126ff59f7"
+    },
+    {
+      "path": "games/monecraft/rules.md",
+      "size": 742,
+      "sha256": "c3609c34598e9ddc45d7b81a4f8eea47cda58b45e12917002baa53c668d28dd6"
+    }
+  ],
+  "game": "monecraft",
+  "schema_version": 1
+}

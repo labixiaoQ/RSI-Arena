@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-11-11T09:00:23.183Z",
+  "scope": "production Sites D1/R2 + authenticated owner browser + existing WSL + real Gear with deterministic model/game fixtures",
+  "sourceCommit": "084e9eedac2f518b8985e2a3d95490e7c81b7705",
+  "site": "https://rsi-arena-lab.chengrenmin76.chatgpt.site",
+  "actualModelRequests": 0,
+  "actualTokens": 0,
+  "actualGames": 0,
+  "cloudStatus": "completed",
+  "cloudVisibility": "private",
+  "ownerResultPage": "verified through normal authenticated UI",
+  "jobId": "run-7d53ba32-6b18-4530-8d7c-9474ebf16681",
+  "status": "completed",
+  "finishedAt": "2026-11-11T08:53:44.149Z",
+  "manifestDigest": "sha256:a10a801a299dfd0d23cc8e8f05cb264b73904032df4810bb185b942e4bf3dea3",
+  "experimentArtifact": "6a664b927ab1bcc82534bbe87830398fc12cb5e80a738250b3bc9ee47714173b",
+  "budget": {
+    "observed": {
+      "agent_calls": 32,
+      "model_requests": 0,
+      "tokens": 0,
+      "episodes": 10,
+      "matches": 60
+    },
+    "charged": {
+      "agent_calls": 32,
+      "model_requests": 0,
+      "tokens": 0,
+      "episodes": 10,
+      "matches": 60
+    },
+    "unknown": []
+  },
+  "arms": [
+    {
+      "label": "B",
+      "gate": "rejected",
+      "retained_improver": "sha256:96e5aa76c0c41bff856ab370a61f039d81afd0f6d413461131d1acb535185914",
+      "exported_instruction": "Controlled fixture only; controlled-generation:0",
+      "frozen_harness": "sha256:981a16b4ede07740d31b59b66bc6edda19a7f97629b4744f374d32cf90104b2c"
+    },
+    {
+      "label": "C",
+      "gate": "accepted",
+      "retained_improver": "sha256:9163b438015c9deead5adec7d8cacace799e51e2532855cefbe349329f71a69c",
+      "exported_instruction": "Controlled fixture only; controlled-generation:1",
+      "frozen_harness": "sha256:17910dea88817bb6d3fa40ed0fd31469c52e45658ca10247856a4a1b30323925"
+    }
+  ],
+  "profile": {
+    "protocol_digest": "sha256:1fb80c81895de8b523ba65bbf196a3e9b24d8340d38456e1d2297b8c3ed96cb6",
+    "gear_implementation_digest": "sha256:342f86065934819779d6f82295d661b14baec6520082f5b6f4996174c8fc7e43",
+    "image_digest": null,
+    "model_identity": "sha256:1a9ba514b7144013956749f58385c5f7f32d3f0d85dcd3cb111b6f4d943154ed",
+    "match_identity": "sha256:e538bd21ae03f00da579fc9fccd8d30d7251510f8b87eb42939ea242c2f13f6d",
+    "evidence_kind": "controlled",
+    "plan": {
+      "epochs": 1,
+      "audit_seeds": [
+        31,
+        47
+      ],
+      "per_generation": {
+        "agent_calls": 17,
+        "model_requests": 0,
+        "tokens": 0,
+        "episodes": 4,
+        "matches": 24
+      },
+      "per_arm": {
+        "agent_calls": 17,
+        "model_requests": 0,
+        "tokens": 0,
+        "episodes": 4,
+        "matches": 24
+      },
+      "per_audit": {
+        "agent_calls": 8,
+        "model_requests": 0,
+        "tokens": 0,
+        "episodes": 2,
+        "matches": 12
+      },
+      "total": {
+        "agent_calls": 50,
+        "model_requests": 0,
+        "tokens": 0,
+        "episodes": 12,
+        "matches": 72
+      },
+      "interpretation": "A paired pilot compares frozen harnesses; it does not establish statistical significance or general RSI superiority."
+    }
+  },
+  "anonymousChecks": [
+    {
+      "path": "/api/experiments/run-7d53ba32-6b18-4530-8d7c-9474ebf16681",
+      "anonymousStatus": 404
+    },
+    {
+      "path": "/api/artifacts/6a664b927ab1bcc82534bbe87830398fc12cb5e80a738250b3bc9ee47714173b",
+      "anonymousStatus": 404
+    }
+  ],
+  "runningContainers": [],
+  "files": {
+    "runner-state.json": "0bb1fc4e003d33160f8781e36f4bfb4d104102a5d547f1ed2cacf7ba40f734c4",
+    "publication.json": "3d42dd5c4d0385459a0077031ad1cfb8c94886a0411036a6732d1a655e224cf9",
+    "approved-job.json": "13f5af31b75164ff5d01eaab31462263186a001d8d20bd51bb8b039f84b8709d",
+    "execution-profile.json": "0ac7a5a881d59724a1e78894bfc646cf2fdf840beb698c6a056c452a287fa7c8",
+    "gear/report.json": "39bea0215cf25a84fb3846a6312af22252f4d04fd5f091fe448dba60152dc558"
+  }
+}

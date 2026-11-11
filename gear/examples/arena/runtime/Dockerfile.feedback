@@ -1,0 +1,13 @@
+# Offline development upgrade from the already validated SDK-complete runtime.
+FROM gear-arena-monecraft:sdk-complete
+USER root
+COPY gear/examples/arena/runtime/match.py /opt/arena/match.py
+COPY gear/examples/arena/runtime/contract-probe.cpp /opt/arena/contract-probe.cpp
+WORKDIR /opt/monecraft
+RUN g++-14 -O2 -std=c++14 -w -pthread -fPIC -D_SERVER_ \
+    -I. -Ilogic/src/include -Ilogic/src/include/sdk -Ishared -Ishared/include \
+    -Iplatform_shared/include -Iliblogic/include -Ilibailoader/include -Iailoader/src -Iailoader/src/include -Isdk \
+    /opt/arena/contract-probe.cpp logic/src/sdk.cc logic/src/MapGen*.cc logic/src/achieve.cc logic/src/output.cc shared/*.cc liblogic/*.cc \
+    logic/src/lib_json/*.cc platform_shared/*.cc -o /opt/arena/contract-probe -pthread -ldl -lrt
+WORKDIR /
+USER 1000:1000

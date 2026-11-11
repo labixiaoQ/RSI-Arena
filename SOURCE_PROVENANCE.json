@@ -1,0 +1,14 @@
+{
+  "gear": {
+    "base_commit": "11bad082e1163d12caf2f955125d596f40b395f1",
+    "snapshot": "working tree, including local Arena changes"
+  },
+  "aaarena": {
+    "base_commit": "fd52d2337b6711f0f3a239216f48720c125750be",
+    "snapshot": "working tree, including local Arena changes"
+  },
+  "rsi-arena": {
+    "base_commit": "0ccdc3d7b1b082fb4fee3822f34a4ba34fff7ec5",
+    "snapshot": "working tree, including local Arena changes"
+  }
+}
