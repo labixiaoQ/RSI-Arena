@@ -1,20 +1,101 @@
-# Gear Arena 升级包与复现
+# 从公开仓库复现
 
-下载 [Gear Arena v3 源码升级包](/downloads/gear-arena-v3.tar.gz)。它是固定 Gear 基线上的完整补丁及新增文件覆盖层，包含协议、适配器、测试、运行示例、文档、每文件摘要和原 Gear LICENSE；不是另一个未经固定版本的 Gear fork。
+本页面向 [labixiaoQ/RSI-Arena](https://github.com/labixiaoQ/RSI-Arena) 的完整源码快照。仓库已包含修改后的 `gear/`、AAArena 源码与游戏资源包，以及网站和 runner；**直接克隆后不要再次给 `gear/` 应用升级补丁，也不要在已有 `aaarena/` 上重复 clone。**
 
-当前网站已有的真实模型证据来自 **v2 探索性试验及明确标记的恢复修订**。两臂最终 H 相同，分差不证明 RSI 提升。**v3 的新增验证是受控 backend 与本地 mock HTTP，没有新增真实模型或游戏成绩。** 升级代码不能把 v2 历史结果改称 v3。
+以下默认使用 macOS 或 Linux/WSL 的 shell，Node.js 24+（Gear 也支持 22.19+）、npm、Python 3.10+、Git。安装依赖需要网络；下述受控验证不需要 DeepSeek 密钥、Docker、云端账号或付费额度。Python 用于资源校验，以及部分 Gear 原生测试所需的 Python worker；仅安装基础包，不安装训练或模型服务。
 
-## 固定来源
+## 1. 获取源码与固定资源
 
-- Gear：`https://github.com/rsi-gear/gear.git`，commit `11bad082e1163d12caf2f955125d596f40b395f1`。
-- AAArena：`https://github.com/THU-CST-SAST/AAArena.git`，commit `fd52d2337b6711f0f3a239216f48720c125750be`。
-- MoneCraft 资源由 AAArena 的 `assets/monecraft.tar.gz` 提供，归档 SHA-256 为 `69fffd4d77f7da743e22a4251ef9920cd0f082ef110647a0db815a44657a287a`。保留 AAArena/MoneCraft 的来源及许可文件。
+```sh
+git clone https://github.com/labixiaoQ/RSI-Arena.git
+cd RSI-Arena
+git rev-parse HEAD
+python3 aaarena/scripts/install_assets.py --games monecraft
+python3 aaarena/scripts/install_assets.py --games monecraft --verify-only
+```
 
-来源地址来自当前本机仓库的 Git remote；本文不声称已重新联网验证可用性。升级包不重复分发游戏资源、依赖、模型凭证、原始模型请求/响应、工作区文件或历史运行目录。
+记录输出的提交号，以便复现同一版本。安装器只从仓库内 `aaarena/assets/monecraft.tar.gz` 解压并验证 227 个文件，不启动游戏，也不下载额外游戏数据。解压目录 `aaarena/games/` 被 Git 忽略。
 
-## 在新副本应用
+## 2. 构建 Gear 并运行受控测试
 
-使用新建空目录，不在正在运行或含未提交修改的 Gear 中操作。以下以升级包和新克隆的 `gear/`、`aaarena/` 位于同一个父目录为例：
+从仓库根目录执行：
+
+```sh
+cd gear
+npm ci
+python3 -m venv .venv
+.venv/bin/pip install -e ./python
+export GEAR_PYTHON="$PWD/.venv/bin/python"
+npm run build
+npm test -- tests/unit/arena.spec.ts tests/unit/arena-learning.spec.ts tests/unit/arena-continuation.spec.ts tests/unit/arena-model.spec.ts tests/unit/arena-v3.spec.ts
+cd ..
+```
+
+Gear 测试配置还会在测试前构建一次运行时。构建会获取并校验固定版本的 ToolFs npm 包；不能把首次构建称为完全离线。上述五组测试验证 I 继承、一步后续评测、预算、恢复和模型输出失败语义；本地 HTTP 模拟与 fixture 不会访问真实模型。
+
+## 3. 验证网站与 runner
+
+```sh
+cd rsi-arena
+npm ci
+npm test
+npm run typecheck
+node platform-runner/cli.mjs --preflight
+node platform-runner/cli.mjs --plan
+npm run build
+cd ..
+```
+
+`npm test` 覆盖后端、runner 和 Windows 代理传输测试，依赖上一步的 Gear 构建和游戏资源。`--preflight` / `--plan` 只读取源码、资源与构建，输出协议、实现摘要和预算；不会领取线上任务、调用模型或启动 Docker。输出的镜像摘要是**配置要求**，不代表本机已安装、可运行或重新构建出该镜像。
+
+如配置了 `ARENA_GEAR_ROOT`、`ARENA_GAME_ROOT` 或 `ARENA_GEAR_BUILD`，它们会覆盖默认相邻目录；首次复现请避免继承其他项目的配置。测试不需要 `ARENA_ENABLE_LIVE=1`。
+
+## 4. 本地打开网站（可选）
+
+完成上述构建后，从 `rsi-arena/` 执行一次两份数据库迁移：
+
+```sh
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_warm_ender_wiggin.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0001_slow_sir_ram.sql
+npm run dev
+```
+
+打开 `http://localhost:5173`。迁移针对本地 D1；已迁移的数据库无需重跑。克隆中没有 `.sites-runtime/`，默认使用 portable 本地配置。历史公开结果和 42 局回放已包含在 `public/data/` 中，查看它们无需重跑模型。
+
+要测试本地提交、审批和 runner 回传，在忽略的 `rsi-arena/.dev.vars` 中配置 `ARENA_ADMIN_EMAIL=seedy@sites.test` 与一个自行生成的 `ARENA_RUNNER_TOKEN`。在另一个忽略的 `.env.runner` 文件中放入同一 runner token，并设置 `ARENA_ENABLE_LIVE=0`。保存 `.dev.vars` 后重启 `npm run dev`。开发登录是本地 mock 身份，仅用于本机验证；不能作为生产认证。
+
+保持本地服务运行，在第二个终端从 `rsi-arena/` 执行：
+
+```sh
+node --env-file=.env.runner tests/service-e2e.mjs
+```
+
+该脚本只连接 `127.0.0.1:5173`，创建私有受控任务，运行真实 Gear 编排但使用模拟模型和模拟比赛，验证审批、I 继承、上传及预算。它会更新本地数据库、`work/service-e2e/` 和 `docs/validation/service-e2e.json`；最后一个文件是新的本地验证记录，不要冒充仓库原有历史证据。
+
+## 真实游戏与线上部署的边界
+
+以上步骤复现的是工程闭环，不会重新生成历史 DeepSeek 得分。历史 v2 试验的公开回放和摘要已收录；原始模型请求、私有账本、凭证和 `gear/arena-runs/` 不在公开仓库，因而不承诺从本仓库完整重放原始模型调用或再次得到相同分数。v3 尚未完成新增真实模型的线上全链路验收。
+
+真实 MoneCraft 执行另需 Docker/Linux。完整镜像的构建入口是仓库根目录下：
+
+```sh
+docker build --platform linux/amd64 -f gear/examples/arena/runtime/Dockerfile -t gear-arena-monecraft:local .
+```
+
+此命令仅作为另行准备真实游戏环境的入口，不属于上述无 Docker 验证；本轮未运行。不要使用依赖历史本机缓存镜像的 `Dockerfile.feedback`。基础镜像已固定，但系统软件安装不是位级可复现的快照，重建的内容摘要可能不同。
+
+网站 `lib/platform-contract.ts` 与 runner `platform-runner/config.mjs` 当前固定历史运行配置，新的镜像不能直接替换该摘要。部署自己的实例时，需核验并一致更新运行配置、重新预检、审批新任务；不能修改旧 manifest 或声称本机拥有历史镜像。当前容器是人工审核下的实验环境，并非匿名恶意代码的生产隔离方案。
+
+本地开发不需要 Sites 账号。部署线上则需要自己的 Sites 项目、D1/R2、可信登录和环境变量：`.openai/hosting.json` 中的项目 ID 仅标识本项目部署，不授予访问权；不要把自己部署的版本发布到原站点。模型密钥只配置在独立 runner。完整操作见 [runner 文档](runner.zh-CN.md) 和 [架构说明](architecture.zh-CN.md)。任何新付费试验仍需单独批准，本页不授权调用模型。
+
+## 固定来源与可选升级包
+
+- Gear 基线：`11bad082e1163d12caf2f955125d596f40b395f1`，来源 [rsi-gear/gear](https://github.com/rsi-gear/gear)。
+- AAArena 基线：`fd52d2337b6711f0f3a239216f48720c125750be`，来源 [THU-CST-SAST/AAArena](https://github.com/THU-CST-SAST/AAArena)。
+- MoneCraft 包 SHA-256：`69fffd4d77f7da743e22a4251ef9920cd0f082ef110647a0db815a44657a287a`。
+- [来源快照](../../SOURCE_PROVENANCE.json) 与 [第三方声明](../../THIRD_PARTY_NOTICES.md) 保留上游版本与许可证。
+
+仅当你要从独立、干净的上游 Gear 构建时，使用 [Gear Arena v3 升级包](../public/downloads/gear-arena-v3.tar.gz)。在仓库外的新空目录解压后：
 
 ```sh
 tar -xzf gear-arena-v3.tar.gz
@@ -24,48 +105,4 @@ git -C gear checkout --detach 11bad082e1163d12caf2f955125d596f40b395f1
 node gear-arena-v3/apply.mjs ./gear
 ```
 
-`verify.mjs` 核对 `manifest.json` 中每个载荷文件的字节摘要。`apply.mjs` 要求目标是干净的指定基线，先验证全部文件、`git apply --check` 和新增文件不冲突，再应用 `upgrade.patch` 与 `overlay/`，最后逐文件核对源码结果。它拒绝修改已有脏目录或再次覆盖已应用的副本。包中没有自动执行安装、模型调用或 Docker 的脚本。
-
-安装与构建在上述新副本中完成：
-
-```sh
-cd gear
-npm ci
-python3 -m venv .venv
-.venv/bin/pip install -e ./python
-npm run build
-npm run typecheck
-GEAR_PYTHON="$PWD/.venv/bin/python" npm test -- tests/unit/arena.spec.ts tests/unit/arena-learning.spec.ts tests/unit/arena-continuation.spec.ts tests/unit/arena-model.spec.ts tests/unit/arena-v3.spec.ts
-cd ..
-```
-
-Node.js 需要 22.19+ 或 24+。安装和 Gear 的标准构建可能访问依赖源，需要可用网络；本次打包没有执行这些下载。上述 Arena 单元测试使用受控模型/比赛及本地 HTTP 响应，不调用付费模型或真实游戏。仓库标准测试配置会先构建；受限离线环境应使用已核验的本地依赖与构建产物，不能将未跑测试写成通过。
-
-## 获取固定游戏资源
-
-```sh
-git clone https://github.com/THU-CST-SAST/AAArena.git aaarena
-git -C aaarena checkout --detach fd52d2337b6711f0f3a239216f48720c125750be
-python3 aaarena/scripts/install_assets.py --games monecraft
-python3 aaarena/scripts/install_assets.py --games monecraft --verify-only
-```
-
-AAArena 的安装脚本从仓库自带资源包解压并校验，不需要另找游戏源码或 Git LFS。当前完整 Dockerfile 引用相邻 `gear/` 与 `aaarena/`，从共同父目录构建；不要使用只针对历史本机缓存镜像的 `Dockerfile.feedback` 作为全新环境入口。
-
-只有准备实际游戏执行时，才在专用 Linux 主机安装和构建 Docker 环境。当前容器属于 experimental development profile，不能当作匿名恶意代码的生产隔离保证。重建镜像的内容摘要可能不同于历史 Mac 开发镜像，不能把新镜像标成历史镜像或修改旧 manifest；需创建新的本机/网站 profile、重新预检并取得独立任务批准。
-
-## 与网站 runner 配合
-
-升级包交付 Gear 部分。网站源码包中的 `platform-runner/` 负责认证、任务领取、心跳、取消、上传和批准边界，见网站源码的 `docs/runner.zh-CN.md`。公共 v3 运行使用该新入口直接调用 `rsi-gear/arena`；包内 `run.mjs`、`compare.mjs` 和专用恢复示例保留历史 v1/v2 实验入口，不能把它们直接接到公开提交表单，也不能继承其历史额度记录。
-
-先执行 runner 的 `--preflight`/`--plan` 核对实际协议、Gear 实现和镜像摘要，再批准新的具体任务。真实模型始终需要本地显式开关、凭证及与不可变 manifest 完全匹配的任务批准。默认受控验证没有真实模型消耗，公开页面必须保持 `controlled` 分类。
-
-## 包内可核查内容
-
-- `upgrade.patch`：基线上所有 tracked 修改，包括 package export、构建入口、类型注册和边界检查。
-- `overlay/`：Arena 新增 `src/`、`tests/`、`examples/` 和 `docs/`。
-- `manifest.json`：固定上游来源、每文件 SHA-256、tracked 应用后摘要、新增文件摘要与文档路径净化记录。
-- `LICENSE`：原 Gear MIT 许可，原文保留。
-- `verify.mjs` / `apply.mjs`：只验证和应用源码，不下载或启动实验。
-
-历史验证文档只作为描述性来源保留。机器绝对路径已转换成相对来源引用，文档引用的历史 `arena-runs/` 产物不在源码包内；原始执行记录没有被改写。每个净化文件同时记录原始源码摘要与打包内容摘要，不能把净化后的文档摘要当成原始执行产物摘要。
+升级包只交付 Gear 部分，不含网站、私有试验目录或游戏数据；`verify.mjs` 校验载荷，`apply.mjs` 拒绝错误基线、脏目录和重复覆盖。包中历史文档保留当时状态，不覆盖本仓库的最新验收记录。

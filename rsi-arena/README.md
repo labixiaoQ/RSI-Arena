@@ -30,7 +30,9 @@
 
 ## 开发
 
-Node 22.13+。网站与已扩展 Gear 及 AAArena 保持同级：
+首次克隆请先按[完整复现指南](docs/reproduction.zh-CN.md)构建相邻的 Gear 并解压 MoneCraft；本页命令默认从 `rsi-arena/` 运行。
+
+Node 22.19+ 或 24+。网站与已扩展 Gear 及 AAArena 保持同级：
 
 ```text
 workspace/
@@ -53,7 +55,7 @@ npm run dev
 
 ```sh
 npx tsc --noEmit
-node --experimental-vm-modules --test tests/backend-review.test.mjs platform-runner/tests/runner.test.mjs
+npm test
 node --env-file=.env.runner tests/service-e2e.mjs
 ```
 
